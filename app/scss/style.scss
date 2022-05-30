@@ -1,0 +1,347 @@
+    @import 'vars';
+    @import 'fonts';
+    @import 'reset';
+    @import 'global';
+    @import 'libs';
+    @import 'media';
+    .header {
+        background-color: #FCFCFC;
+        /*  background-color: #FFFF73; */
+        ;
+        &__top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 0;
+        }
+        &__inner {
+            padding: 50px 0 116px;
+            display: flex;
+        }
+        &__text {
+            margin-top: 100px;
+        }
+        &__title {
+            margin-bottom: 40px;
+            @extend%montserrat-700;
+            font-size: 48px;
+            line-height: 59px;
+        }
+        &__subtitle {
+            margin-bottom: 60px;
+            @extend%montserrat-500;
+            font-size: 18px;
+            line-height: 22px;
+        }
+        &__btn {
+            padding: 16px 48px;
+            @extend%montserrat-700;
+            background-color: $green;
+            font-size: 15px;
+            line-height: 18px;
+            color: #fff;
+            /* box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.75); */
+            box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
+        }
+    }
+    
+    .menu {
+        &__list {
+            display: flex;
+        }
+        &__link {
+            @extend%montserrat-500;
+            font-size: 15px;
+            line-height: 18px;
+        }
+        &__item+.menu__item {
+            padding-left: 80px;
+        }
+        &__phone {
+            @extend%montserrat-700;
+            font-size: 18px;
+            line-height: 22px;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                background-image: url(/images/phone.svg);
+                width: 21px;
+                height: 20px;
+                top: 0;
+                left: -30px;
+            }
+        }
+    }
+    
+    .slider-choice {
+        padding: 45px 0;
+        &__item {
+            display: flex;
+            justify-content: center;
+            max-width: 330px;
+            height: 260px;
+            box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
+            margin: 20px 50px;
+        }
+        &__item-inner {
+            padding: 0 30px;
+        }
+        &__item-icon {
+            padding: 25px 0 25px;
+        }
+        &__item-title {
+            border-top: 4px solid $green;
+            padding: 25px 0 20px;
+        }
+        &__item-text {
+            font-size: 15px;
+            line-height: 20px;
+            padding-bottom: 43px;
+        }
+    }
+    
+    .breaking {
+        background-color: #FCFCFC;
+        &__inner {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            /* grid-template-rows: repeat(2, 1fr); */
+            grid-gap: 40px;
+        }
+    }
+    
+    .breaking-item {
+        box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
+        width: 590px;
+        height: 280px;
+        position: relative;
+        &__text {
+            margin-top: 20px;
+            font-size: 15px;
+            line-height: 135%;
+            &:hover {
+                color: $accent;
+            }
+        }
+        &__columns {
+            padding-right: 30px;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+        &--screen::before {
+            background-image: url(/images/breaking-icons/screen.png);
+            width: 201px;
+            height: 163px;
+        }
+        &--battery::before {
+            background-image: url(/images/breaking-icons/battery.png);
+            width: 273px;
+            height: 207px;
+        }
+        &--sound::before {
+            background-image: url(/images/breaking-icons/sound.png);
+            width: 255px;
+            height: 160px;
+        }
+        &--camera::before {
+            background-image: url(/images/breaking-icons/camera.png);
+            width: 232px;
+            height: 280px;
+        }
+        &--button::before {
+            background-image: url(/images/breaking-icons/button.png);
+            width: 494px;
+            height: 280px;
+        }
+        &--mic::before {
+            background-image: url(/images/breaking-icons/mic.png);
+            width: 226px;
+            height: 242px;
+        }
+        &--sim::before {
+            background-image: url(/images/breaking-icons/sim.png);
+            width: 215px;
+            height: 157px;
+        }
+        &--general::before {
+            background-image: url(/images/breaking-icons/general.png);
+            width: 158px;
+            height: 280px;
+        }
+        &__inner {
+            display: flex;
+            padding-left: 79px;
+            padding-bottom: 60px;
+        }
+        &__title {
+            text-align: left;
+            padding: 35px 0 20px 79px;
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                top: 30px;
+                left: 27px;
+            }
+            &--battery::before {
+                background-image: url(/images/breaking-icons/icons/battery.svg);
+            }
+            &--screen::before {
+                background-image: url(/images/breaking-icons/icons/screen.svg);
+            }
+            &--sound::before {
+                background-image: url(/images/breaking-icons/icons/sound.svg);
+            }
+            &--camera::before {
+                background-image: url(/images/breaking-icons/icons/camera.svg);
+            }
+            &--button::before {
+                background-image: url(/images/breaking-icons/icons/button.svg);
+            }
+            &--mic::before {
+                background-image: url(/images/breaking-icons/icons/mic.svg);
+            }
+            &--sim::before {
+                background-image: url(/images/breaking-icons/icons/sim.svg);
+            }
+            &--general::before {
+                background-image: url(/images/breaking-icons/icons/general.svg);
+            }
+        }
+    }
+    
+    .brands {
+        &__inner {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 30px;
+        }
+        &__item {
+            width: 220px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
+            &:hover {
+                background-color: $green;
+                opacity: 0.5;
+                box-shadow: 0px 0px 30px rgba(116, 138, 0, 20);
+            }
+        }
+    }
+    
+    .reviews {
+        padding-bottom: 150px;
+        &__inner {}
+    }
+    
+    .reviews-slider {
+        margin-bottom: 80px;
+        &__item {
+            margin: 25px;
+            max-width: 560px;
+            height: 354px;
+            padding: 35px;
+            box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
+        }
+        &__item-name {
+            padding-left: 50px;
+            @extend%montserrat-700;
+            font-size: 18px;
+            line-height: 135%;
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                background-image: url(/images/icons/chat.svg);
+                width: 30px;
+                height: 30px;
+                top: -3px;
+                left: 0px;
+            }
+        }
+        &__item-box {
+            margin: 25px 0;
+            display: flex;
+        }
+        &__item-date {
+            padding-right: 30px;
+        }
+        &__item-text {
+            margin-bottom: 25px;
+            height: 125px;
+            font-size: 16px;
+            line-height: 165%;
+        }
+        &__item-bottom {
+            padding-right: 20px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        &__item-link {
+            padding-left: 10px;
+            &:hover {
+                color: #ADC431;
+            }
+        }
+    }
+    
+    .reviews-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__link {
+            height: 50px;
+            padding: 16px 48px;
+            background-color: $default-lite;
+            font-size: 15px;
+            line-height: 18px;
+            color: #fff;
+        }
+        &__btn {
+            height: 50px;
+            margin-left: 20px;
+            padding: 13px 30px 13px 60px;
+            @extend%montserrat-700;
+            font-size: 15px;
+            line-height: 18px;
+            box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
+            background-color: #fff;
+            position: relative;
+            &:hover {
+                box-shadow: 0px 0px 30px rgba(116, 138, 0, 1);
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                top: 7px;
+                left: 16px;
+            }
+            &--yandex::after {
+                background-image: url(/images/icons/yandex.svg);
+                width: 30px;
+                height: 30px;
+            }
+            &--google::after {
+                background-image: url(/images/icons/google.svg);
+                width: 30px;
+                height: 30px;
+            }
+            &--2gis::after {
+                background-image: url(/images/icons/2gis.svg);
+                background-size: cover;
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }

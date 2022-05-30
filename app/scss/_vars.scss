@@ -1,0 +1,30 @@
+$accent:#748a00;
+$green:#88BF56;
+$blue:#00ace4;
+
+/*запасные цвета*/
+
+$default-lite:#ADC431;
+$default-dark:#4B5A00;
+$default-3:#5B681A;
+$default-4:#B3C458;
+
+/* montserrat-fonts */
+
+%montserrat-500 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+}
+
+%montserrat-700 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+}
+
+%montserrat-800 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+}

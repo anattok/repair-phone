@@ -1,0 +1,60 @@
+    body {
+        @extend%montserrat-500;
+        color: #000;
+    }
+    
+    a {
+        color: #000;
+    }
+    
+    .container {
+        max-width: 1224px;
+        margin: 0 auto;
+    }
+    
+    .container-slider {
+        max-width: 1304px;
+        margin: 0 auto;
+    }
+    
+    .title {
+        font-size: 28px;
+        /* line-height: 135%; */
+        line-height: 38px;
+        padding: 100px 0 45px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    
+    .item__title {
+        font-size: 18px;
+        line-height: 24px;
+        @extend%montserrat-700;
+    }
+    /*КНОПКИ СЛАЙДЕРА*/
+    
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+        li {
+            padding: 0 10px;
+            button {
+                padding: 0;
+                font-size: 0;
+                border: none;
+                border-radius: 50%;
+                background-color: #C4C4C4;
+                width: 10px;
+                height: 10px;
+            }
+            &.slick-active {
+                button {
+                    width: 30px;
+                    height: 10px;
+                    border-radius: 5px;
+                    background-color: $accent;
+                }
+            }
+        }
+    }
