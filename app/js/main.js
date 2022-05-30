@@ -4,7 +4,7 @@ $(function() {
         slidesToScroll: 1,
         dots: true,
         arrows: false,
-        /* autoplay: true, */
+        autoplay: true,
         autoplaySpeed: 2000,
         variableWidth: true,
 
@@ -15,9 +15,21 @@ $(function() {
         slidesToScroll: 1,
         dots: true,
         arrows: false,
-        /* autoplay: true, */
+        autoplay: true,
         autoplaySpeed: 2000,
         variableWidth: true,
+
+    });
+
+    $('.actions__slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        arrows: false,
+        autoplay: true,
+        vertical: true,
+        verticalSwiping: true,
+        autoplaySpeed: 2000,
 
     });
 

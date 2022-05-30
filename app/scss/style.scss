@@ -6,7 +6,6 @@
     @import 'media';
     .header {
         background-color: #FCFCFC;
-        /*  background-color: #FFFF73; */
         ;
         &__top {
             display: flex;
@@ -40,7 +39,6 @@
             font-size: 15px;
             line-height: 18px;
             color: #fff;
-            /* box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.75); */
             box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
         }
     }
@@ -103,10 +101,10 @@
     
     .breaking {
         background-color: #FCFCFC;
+        padding-bottom: 140px;
         &__inner {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            /* grid-template-rows: repeat(2, 1fr); */
             grid-gap: 40px;
         }
     }
@@ -217,30 +215,8 @@
         }
     }
     
-    .brands {
-        &__inner {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            grid-gap: 30px;
-        }
-        &__item {
-            width: 220px;
-            height: 100px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
-            &:hover {
-                background-color: $green;
-                opacity: 0.5;
-                box-shadow: 0px 0px 30px rgba(116, 138, 0, 20);
-            }
-        }
-    }
-    
     .reviews {
         padding-bottom: 150px;
-        &__inner {}
     }
     
     .reviews-slider {
@@ -301,15 +277,22 @@
         &__link {
             height: 50px;
             padding: 16px 48px;
+            @extend%montserrat-700;
             background-color: $default-lite;
             font-size: 15px;
             line-height: 18px;
+            text-transform: uppercase;
             color: #fff;
+        }
+        &__inner {
+            display: flex;
         }
         &__btn {
             height: 50px;
             margin-left: 20px;
             padding: 13px 30px 13px 60px;
+            display: flex;
+            align-items: center;
             @extend%montserrat-700;
             font-size: 15px;
             line-height: 18px;
@@ -318,30 +301,93 @@
             position: relative;
             &:hover {
                 box-shadow: 0px 0px 30px rgba(116, 138, 0, 1);
+                /* box-shadow: 0px 0px 30px rgb(0, 106, 138); */
             }
             &::after {
                 content: '';
                 position: absolute;
                 width: 24px;
                 height: 24px;
-                top: 7px;
-                left: 16px;
+                top: 13px;
+                left: 20px;
+                background-size: cover;
             }
             &--yandex::after {
                 background-image: url(/images/icons/yandex.svg);
-                width: 30px;
-                height: 30px;
             }
             &--google::after {
                 background-image: url(/images/icons/google.svg);
-                width: 30px;
-                height: 30px;
             }
             &--2gis::after {
                 background-image: url(/images/icons/2gis.svg);
-                background-size: cover;
-                width: 30px;
-                height: 30px;
             }
+        }
+    }
+    
+    .actions {
+        margin-bottom: 150px;
+    }
+    
+    .brands {
+        margin: 100px 0;
+        &__inner {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 30px;
+        }
+        &__item {
+            width: 220px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
+            &:hover {
+                background-color: $green;
+                opacity: 1;
+                box-shadow: 0px 0px 30px rgba(116, 138, 0, 20);
+            }
+        }
+    }
+    
+    .contacts {
+        &__map {
+            margin-bottom: 30px;
+            &--frame {
+                border: 2px solid #ADC431;
+            }
+        }
+    }
+    
+    .footer {
+        margin: 100px 0;
+        &__inner {
+            display: flex;
+        }
+    }
+    
+    .adress {
+        &__inner {
+            display: flex;
+            align-items: center;
+        }
+        &__phone {
+            font-size: 18px;
+            line-height: 165%;
+            @extend%montserrat-700;
+            color: $accent;
+        }
+        &__slogan {
+            padding-left: 20px;
+        }
+        &__time-work {
+            padding-left: 75px;
+        }
+        &__text {
+            width: 420px;
+            margin-left: auto;
+        }
+        &__adress {
+            padding-left: 133px;
         }
     }
