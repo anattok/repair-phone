@@ -5,7 +5,7 @@
     @import 'libs';
     @import 'media';
     .header {
-        background-color: #FCFCFC;
+        background-color: #FFF;
         ;
         &__top {
             display: flex;
@@ -35,7 +35,7 @@
         &__btn {
             padding: 16px 48px;
             @extend%montserrat-700;
-            background-color: $green;
+            background-color: $accent;
             font-size: 15px;
             line-height: 18px;
             color: #fff;
@@ -74,7 +74,9 @@
     
     .slider-choice {
         padding: 45px 0;
+        background-color: $default;
         &__item {
+            background-color: #fff;
             display: flex;
             justify-content: center;
             max-width: 330px;
@@ -89,7 +91,7 @@
             padding: 25px 0 25px;
         }
         &__item-title {
-            border-top: 4px solid $green;
+            border-top: 4px solid $accent;
             padding: 25px 0 20px;
         }
         &__item-text {
@@ -100,20 +102,27 @@
     }
     
     .breaking {
-        background-color: #FCFCFC;
+        background-color: $accent;
         padding-bottom: 140px;
         &__inner {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-gap: 40px;
         }
+        &__title {
+            color: #fff;
+        }
     }
     
     .breaking-item {
-        box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
+        background-color: #fff;
+        /* box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2); */
         width: 590px;
         height: 280px;
         position: relative;
+        &:hover {
+            box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
+        }
         &__text {
             margin-top: 20px;
             font-size: 15px;
@@ -265,7 +274,7 @@
         &__item-link {
             padding-left: 10px;
             &:hover {
-                color: #ADC431;
+                color: $accent;
             }
         }
     }
@@ -278,7 +287,7 @@
             height: 50px;
             padding: 16px 48px;
             @extend%montserrat-700;
-            background-color: $default-lite;
+            background-color: $accent;
             font-size: 15px;
             line-height: 18px;
             text-transform: uppercase;
@@ -325,11 +334,16 @@
     }
     
     .actions {
+        background-color: $accent;
         margin-bottom: 150px;
+        &__title {
+            color: #fff;
+        }
     }
     
     .brands {
-        margin: 100px 0;
+        background-color: $default;
+        padding: 100px 0;
         &__inner {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
@@ -343,7 +357,7 @@
             align-items: center;
             box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
             &:hover {
-                background-color: $green;
+                background-color: $default-4;
                 opacity: 1;
                 box-shadow: 0px 0px 30px rgba(116, 138, 0, 20);
             }
@@ -351,6 +365,7 @@
     }
     
     .contacts {
+        background-color: $default;
         &__map {
             margin-bottom: 30px;
             &--frame {
@@ -360,6 +375,7 @@
     }
     
     .footer {
+        background-color: $accent;
         margin: 100px 0;
         &__inner {
             display: flex;
