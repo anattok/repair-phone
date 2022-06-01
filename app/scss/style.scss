@@ -86,7 +86,8 @@
              max-width: 330px;
              height: 260px;
              box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
-             margin: 20px 50px;
+             margin: 20px 40px;
+             padding-left: 40px;
          }
          &__item-inner {
              padding: 0 30px;
@@ -123,67 +124,51 @@
          background-color: #fff;
          width: 590px;
          height: 280px;
-         position: relative;
+         background-repeat: no-repeat;
+         background-position: bottom right;
          &:hover {
              box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
+         }
+         &__link {
+             z-index: 100;
          }
          &__text {
              margin-top: 20px;
              font-size: 15px;
              line-height: 135%;
              width: 210px;
+             z-index: 100;
              &:hover {
                  color: $accent;
+                 z-index: 100;
              }
          }
          &__columns {
              padding-right: 30px;
          }
-         &::before {
-             content: '';
-             position: absolute;
-             bottom: 0;
-             right: 0;
-         }
-         &--screen::before {
+         &--screen {
              background-image: url(/images/breaking-icons/screen.png);
-             width: 201px;
-             height: 163px;
          }
-         &--battery::before {
+         &--battery {
              background-image: url(/images/breaking-icons/battery.png);
-             width: 273px;
-             height: 207px;
          }
-         &--sound::before {
+         &--sound {
              background-image: url(/images/breaking-icons/sound.png);
-             width: 255px;
-             height: 160px;
          }
-         &--camera::before {
+         &--camera {
              background-image: url(/images/breaking-icons/camera.png);
-             width: 232px;
-             height: 280px;
          }
-         &--button::before {
+         &--button {
              background-image: url(/images/breaking-icons/button.png);
-             width: 494px;
-             height: 280px;
          }
-         &--mic::before {
+         &--mic {
              background-image: url(/images/breaking-icons/mic.png);
-             width: 226px;
-             height: 242px;
          }
-         &--sim::before {
+         &--sim {
              background-image: url(/images/breaking-icons/sim.png);
-             width: 215px;
-             height: 157px;
          }
-         &--general::before {
+         &--general {
              background-image: url(/images/breaking-icons/general.png);
-             width: 158px;
-             height: 280px;
          }
          &__inner {
              display: flex;
@@ -602,12 +587,45 @@
              }
          }
          &__columns-btn {
-             padding: 15px 80px;
+             padding: 15px 82px;
              background-color: $accent;
              border: none;
              color: #FFF;
              @extend%montserrat-700;
              font-size: 15px;
              line-height: 20px;
+         }
+     }
+     
+     .price {
+         margin-bottom: 100px;
+         &__inner {
+             box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
+         }
+         &__inner-title {
+             display: flex;
+             /*   justify-content: space-between; */
+             padding: 25px 45px;
+             background-color: $accent;
+             @extend%montserrat-700;
+             font-size: 18px;
+             line-height: 24px;
+             color: #FFFFFF;
+         }
+         &__item-title {
+             min-width: 350px;
+         }
+         &__service-line {
+             display: flex;
+             padding: 25px 45px;
+             @extend%montserrat-500;
+             font-size: 15px;
+             line-height: 20px;
+             &:hover {
+                 box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
+             }
+         }
+         &__item-service {
+             min-width: 350px;
          }
      }
