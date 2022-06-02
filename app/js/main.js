@@ -33,7 +33,7 @@ $(function() {
 
     });
 
-    $(".star").rateYo({
+    $('.star').rateYo({
         starWidth: "20px",
         ratedFill: "#ADC431",
         normalFill: "#ccccce",
@@ -42,4 +42,18 @@ $(function() {
 
     });
 
+
+
 });
+
+/*пытаюсь сделать кнопку на jquery "показать ещё"*/
+
+/* $(function() {
+
+
+    $(".price__service-line-hide").hide();
+    $(".price__btn-load").click(function() {
+        $(this).next(".price__service-line-hide").slideToggle();
+
+    });
+}); */
