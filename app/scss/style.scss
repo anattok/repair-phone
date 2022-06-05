@@ -3,7 +3,6 @@
      @import 'reset';
      @import 'global';
      @import 'libs';
-     @import 'media';
      .header {
          background-color: #FFF;
          &__top {
@@ -74,6 +73,9 @@
                  left: -30px;
              }
          }
+         &__btn {
+             display: none;
+         }
      }
      
      .slider-choice {
@@ -120,30 +122,30 @@
      
      .breaking-item {
          background-color: #fff;
-         width: 590px;
-         height: 280px;
+         min-width: 590px;
+         min-height: 280px;
          background-repeat: no-repeat;
          background-position: bottom right;
          border: 2px solid #ADC431;
          &:hover {
              box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
          }
+         &__columns {
+             width: 210px;
+         }
          &__link {
              z-index: 100;
+             margin-right: 30px;
+             margin-top: 20px
          }
          &__text {
-             margin-top: 20px;
              font-size: 15px;
              line-height: 135%;
-             width: 210px;
              z-index: 100;
              &:hover {
                  color: $accent;
                  z-index: 100;
              }
-         }
-         &__columns {
-             padding-right: 30px;
          }
          &--screen {
              background-image: url(/images/breaking-icons/screen.png);
@@ -170,9 +172,9 @@
              background-image: url(/images/breaking-icons/general.png);
          }
          &__inner {
+             margin-top: 20px;
              display: flex;
-             padding-left: 79px;
-             padding-bottom: 60px;
+             justify-content: space-around;
          }
          &__title {
              text-align: left;
@@ -569,7 +571,12 @@
      }
      
      .repair {
+         margin-bottom: 100px;
          &__inner {
+             background-image: url('/images/repair.png');
+             /* background-size: cover; */
+             background-repeat: no-repeat;
+             background-position: bottom right;
              box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
              border: 2px solid $border;
              display: flex;
@@ -593,22 +600,21 @@
          }
          &__columns-form {
              width: 300px;
-             position: relative;
-             &::before {
-                 content: "";
-                 position: absolute;
-                 background-image: url(/images/repair-phone.png);
-                 width: 427px;
-                 height: 254px;
-                 top: 20px;
-                 left: -470px;
-             }
              & input {
                  width: 300px;
                  height: 50px;
                  margin-bottom: 40px;
                  border: 2px solid $border;
                  padding-left: 20px;
+             }
+             & textarea {
+                 min-width: 300px;
+                 min-height: 140px;
+                 resize: none;
+                 border: 2px solid $border;
+                 padding-top: 10px;
+                 padding-left: 20px;
+                 margin-bottom: 30px;
              }
          }
          &__columns-btn {
@@ -619,6 +625,12 @@
              @extend%montserrat-700;
              font-size: 15px;
              line-height: 20px;
+         }
+         &__phone {
+             display: block;
+             font-size: 36px;
+             line-height: 30px;
+             margin-bottom: 20px
          }
      }
      
@@ -647,9 +659,8 @@
              font-size: 15px;
              line-height: 20px;
              &:hover {
-                 box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
-                 border: 2px solid #ADC431;
-                 font-size: 17px;
+                 color: #FFF;
+                 background-color: $accent;
              }
          }
          &__item-service {
@@ -663,3 +674,5 @@
              background-color: $accent;
          }
      }
+     
+     @import 'media';

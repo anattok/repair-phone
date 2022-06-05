@@ -1,13 +1,25 @@
 $(function() {
     $('.slider-choice__inner ').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
         dots: true,
         arrows: false,
         autoplay: true,
         autoplaySpeed: 2000,
         variableWidth: true,
-
+        responsive: [{
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
 
     $('.reviews__slider').slick({
@@ -43,6 +55,9 @@ $(function() {
     });
 
 
+    $('.menu__btn').on('click', function() {
+        $('.menu__list').toggleClass('menu__list--active');
+    });
 
 });
 
