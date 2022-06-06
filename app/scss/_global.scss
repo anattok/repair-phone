@@ -11,11 +11,7 @@
         max-width: 1224px;
         margin: 0 auto;
         padding: 0 15px;
-    }
-    
-    .container-slider {
-        max-width: 1304px;
-        margin: 0 auto;
+        /*  overflow: hidden; */
     }
     
     .title {
@@ -31,31 +27,4 @@
         font-size: 18px;
         line-height: 24px;
         @extend%montserrat-700;
-    }
-    /*КНОПКИ СЛАЙДЕРА*/
-    
-    .slick-dots {
-        display: flex;
-        justify-content: center;
-        margin-top: 25px;
-        li {
-            padding: 0 10px;
-            button {
-                padding: 0;
-                font-size: 0;
-                border: none;
-                border-radius: 50%;
-                background-color: #C4C4C4;
-                width: 10px;
-                height: 10px;
-            }
-            &.slick-active {
-                button {
-                    width: 30px;
-                    height: 10px;
-                    border-radius: 5px;
-                    background-color: $accent;
-                }
-            }
-        }
     }

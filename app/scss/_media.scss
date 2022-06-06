@@ -114,13 +114,13 @@
                 margin-right: 35px;
             }
         }
-        .breaking {
-            /*  &__inner {
+        /* .breaking {
+              &__inner {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 grid-gap: 10px;
-            } */
-        }
+            } *
+        } */
         .breaking-item {
             /*  min-width: none; */
             &__inner {
@@ -177,8 +177,25 @@
                 margin-left: 0px;
             }
             &__title {
-                padding: 33px 0 22px 62px;
+                padding: 28px 0 22px 65px;
+                position: relative;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    background-image: url('/images/icons/arrow-down.svg');
+                    width: 11px;
+                    height: 7px;
+                    top: 36px;
+                    right: 30px;
+                }
             }
+            &__inner {
+                display: none;
+            }
+        }
+        .item__title {
+            font-size: 14px;
+            line-height: 24px;
         }
     }
     /* Portrait phones and smaller */
@@ -202,10 +219,6 @@
             font-size: 18px;
         }
         .breaking-item {
-            &__inner {
-                display: block;
-            }
+            background-color: #fff;
         }
     }
-    /* Iphone 5 */
-    /*    @media (max-width: 320px) {} */
