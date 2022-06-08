@@ -34,13 +34,20 @@ accordion();
 
 
 
-let swiper = new Swiper(".slider-choice__inner", {
-    slidesPerView: 3,
-    spaceBetween: 10,
+let swiper = new Swiper('.slider-choice__inner', {
+
+    centeredSlides: true,
+    slidesPerView: "auto",
+    spaceBetween: 57,
     loop: true,
     pagination: {
         el: '.swiper-pagination',
-        type: 'bullets',
+        clickable: true,
     },
+    /* autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    }, */
+
 
 });

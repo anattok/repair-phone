@@ -1,680 +1,690 @@
-     @import 'vars';
-     @import 'fonts';
-     @import 'reset';
-     @import 'global';
-     @import 'libs';
-     .header {
-         background-color: #FFF;
-         &__top {
-             display: flex;
-             justify-content: space-between;
-             align-items: center;
-             padding: 24px 0;
-         }
-         &__inner {
-             padding: 50px 0 116px;
-             display: flex;
-         }
-         &__text {
-             margin-top: 100px;
-         }
-         &__title {
-             margin-bottom: 40px;
-             @extend%montserrat-700;
-             font-size: 48px;
-             line-height: 59px;
-         }
-         &__subtitle {
-             margin-bottom: 60px;
-             @extend%montserrat-500;
-             font-size: 18px;
-             line-height: 22px;
-         }
-         &__btn {
-             padding: 16px 48px;
-             @extend%montserrat-700;
-             background-color: $accent;
-             font-size: 15px;
-             line-height: 18px;
-             color: #fff;
-             box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
-             &:hover {
-                 background-color: #fff;
-                 color: $accent;
-                 border: 2px solid #ADC431;
+         @import 'vars';
+         @import 'fonts';
+         @import 'reset';
+         @import 'global';
+         @import 'libs';
+         .header {
+             background-color: #FFF;
+             &__top {
+                 display: flex;
+                 justify-content: space-between;
+                 align-items: center;
+                 padding: 24px 0;
+             }
+             &__inner {
+                 padding: 50px 0 116px;
+                 display: flex;
+             }
+             &__text {
+                 margin-top: 100px;
+             }
+             &__title {
+                 margin-bottom: 40px;
+                 @extend%montserrat-700;
+                 font-size: 48px;
+                 line-height: 59px;
+             }
+             &__subtitle {
+                 margin-bottom: 60px;
+                 @extend%montserrat-500;
+                 font-size: 18px;
+                 line-height: 22px;
+             }
+             &__btn {
+                 padding: 16px 48px;
+                 @extend%montserrat-700;
+                 background-color: $accent;
+                 font-size: 15px;
+                 line-height: 18px;
+                 color: #fff;
+                 box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
+                 &:hover {
+                     background-color: #fff;
+                     color: $accent;
+                     border: 2px solid #ADC431;
+                 }
              }
          }
-     }
-     
-     .menu {
-         &__list {
-             display: flex;
-         }
-         &__link {
-             @extend%montserrat-500;
-             font-size: 15px;
-             line-height: 18px;
-         }
-         &__item+.menu__item {
-             padding-left: 80px;
-         }
-         &__phone {
-             @extend%montserrat-700;
-             font-size: 18px;
-             line-height: 22px;
-             position: relative;
-             &::before {
-                 content: "";
-                 position: absolute;
-                 background-image: url(/images/phone.svg);
-                 width: 21px;
-                 height: 20px;
-                 top: 0;
-                 left: -30px;
+         
+         .menu {
+             &__list {
+                 display: flex;
              }
-         }
-         &__btn {
-             display: none;
-         }
-     }
-     
-     .slider-choice {
-         margin: 45px 0;
-         &__item {
-             border: 2px solid $border;
-             background-color: #fff;
-             display: flex;
-             min-height: 260px;
-         }
-         &__item-inner {
-             padding: 0 30px;
-         }
-         &__item-icon {
-             padding: 25px 0 25px;
-         }
-         &__item-title {
-             border-top: 4px solid $accent;
-             padding: 25px 0 20px;
-         }
-         &__item-text {
-             font-size: 15px;
-             line-height: 20px;
-             padding-bottom: 43px;
-         }
-     }
-     
-     .swiper-pagination-bullets {
-         background-color: #000;
-         width: 10px;
-         height: 10px;
-         margin: 0 10px;
-     }
-     
-     .breaking {
-         background-color: $accent;
-         padding-bottom: 80px;
-         &__inner {
-             display: grid;
-             grid-template-columns: repeat(2, 1fr);
-             grid-gap: 40px;
-         }
-         &__title {
-             color: #fff;
-         }
-     }
-     
-     .breaking-item {
-         background-color: #fff;
-         min-width: 590px;
-         background-repeat: no-repeat;
-         background-position: bottom right;
-         border: 2px solid #ADC431;
-         &:hover {
-             box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
-         }
-         &__columns {
-             width: 210px;
-         }
-         &__link {
-             z-index: 100;
-             margin-right: 30px;
-             margin-top: 20px
-         }
-         &__text {
-             font-size: 15px;
-             line-height: 135%;
-             z-index: 100;
-             &:hover {
-                 color: $accent;
-                 z-index: 100;
+             &__link {
+                 @extend%montserrat-500;
+                 font-size: 15px;
+                 line-height: 18px;
              }
-         }
-         &--screen {
-             background-image: url(/images/breaking-icons/screen.png);
-         }
-         &--battery {
-             background-image: url(/images/breaking-icons/battery.png);
-         }
-         &--sound {
-             background-image: url(/images/breaking-icons/sound.png);
-         }
-         &--camera {
-             background-image: url(/images/breaking-icons/camera.png);
-         }
-         &--button {
-             background-image: url(/images/breaking-icons/button.png);
-         }
-         &--mic {
-             background-image: url(/images/breaking-icons/mic.png);
-         }
-         &--sim {
-             background-image: url(/images/breaking-icons/sim.png);
-         }
-         &--general {
-             background-image: url(/images/breaking-icons/general.png);
-         }
-         &__inner {
-             margin-top: 20px;
-             display: flex;
-             justify-content: space-around;
-         }
-         &__title {
-             text-align: left;
-             padding: 35px 0 20px 79px;
-             position: relative;
-             &::before {
-                 content: '';
-                 position: absolute;
-                 width: 30px;
-                 height: 30px;
-                 top: 24px;
-                 left: 18px;
-             }
-             &--battery::before {
-                 background-image: url(/images/breaking-icons/icons/battery.svg);
-             }
-             &--screen::before {
-                 background-image: url(/images/breaking-icons/icons/screen.svg);
-             }
-             &--sound::before {
-                 background-image: url(/images/breaking-icons/icons/sound.svg);
-             }
-             &--camera::before {
-                 background-image: url(/images/breaking-icons/icons/camera.svg);
-             }
-             &--button::before {
-                 background-image: url(/images/breaking-icons/icons/button.svg);
-             }
-             &--mic::before {
-                 background-image: url(/images/breaking-icons/icons/mic.svg);
-             }
-             &--sim::before {
-                 background-image: url(/images/breaking-icons/icons/sim.svg);
-             }
-             &--general::before {
-                 background-image: url(/images/breaking-icons/icons/general.svg);
-             }
-         }
-     }
-     
-     .reviews {
-         padding-bottom: 150px;
-     }
-     
-     .reviews-slider {
-         margin-bottom: 80px;
-         &__item {
-             border: 2px solid $border;
-             margin: 25px;
-             max-width: 560px;
-             height: 354px;
-             padding: 35px;
-             box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
-         }
-         &__item-name {
-             padding-left: 50px;
-             @extend%montserrat-700;
-             font-size: 18px;
-             line-height: 135%;
-             position: relative;
-             &::before {
-                 content: '';
-                 position: absolute;
-                 background-image: url(/images/icons/chat.svg);
-                 width: 30px;
-                 height: 30px;
-                 top: -3px;
-                 left: 0px;
-             }
-         }
-         &__item-box {
-             margin: 25px 0;
-             display: flex;
-         }
-         &__item-date {
-             padding-right: 30px;
-         }
-         &__item-text {
-             margin-bottom: 25px;
-             height: 125px;
-             font-size: 16px;
-             line-height: 165%;
-         }
-         &__item-bottom {
-             padding-right: 20px;
-             display: flex;
-             justify-content: flex-end;
-         }
-         &__item-link {
-             padding-left: 10px;
-             &:hover {
-                 color: $accent;
-             }
-         }
-     }
-     
-     .reviews-bottom {
-         display: flex;
-         justify-content: space-between;
-         align-items: center;
-         &__link {
-             height: 50px;
-             padding: 16px 48px;
-             @extend%montserrat-700;
-             background-color: $accent;
-             font-size: 15px;
-             line-height: 18px;
-             text-transform: uppercase;
-             color: #fff;
-         }
-         &__inner {
-             display: flex;
-         }
-         &__btn {
-             border: 2px solid $border;
-             height: 50px;
-             margin-left: 20px;
-             padding: 13px 30px 13px 60px;
-             display: flex;
-             align-items: center;
-             @extend%montserrat-700;
-             font-size: 15px;
-             line-height: 18px;
-             box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
-             background-color: #fff;
-             position: relative;
-             &:hover {
-                 box-shadow: 0px 0px 30px rgba(116, 138, 0, 1);
-                 /* box-shadow: 0px 0px 30px rgb(0, 106, 138); */
-             }
-             &::after {
-                 content: '';
-                 position: absolute;
-                 width: 24px;
-                 height: 24px;
-                 top: 13px;
-                 left: 20px;
-                 background-size: cover;
-             }
-             &--yandex::after {
-                 background-image: url(/images/icons/yandex.svg);
-             }
-             &--google::after {
-                 background-image: url(/images/icons/google.svg);
-             }
-             &--2gis::after {
-                 background-image: url(/images/icons/2gis.svg);
-             }
-         }
-     }
-     
-     .brands {
-         padding-bottom: 100px;
-         &__inner {
-             display: grid;
-             grid-template-columns: repeat(5, 1fr);
-             grid-gap: 30px;
-             margin-bottom: 50px;
-         }
-         &__item {
-             border: 2px solid $border;
-             width: 220px;
-             height: 100px;
-             display: flex;
-             justify-content: center;
-             align-items: center;
-             box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
-             &:hover {
-                 background-color: $border;
-             }
-         }
-         &__btn {
-             display: flex;
-             justify-content: center;
-         }
-         &__btn-link {
-             padding: 16px 22px;
-             @extend%montserrat-700;
-             background-color: $accent;
-             font-size: 15px;
-             line-height: 18px;
-             color: #fff;
-             box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
-             &:hover {
-                 background-color: #fff;
-                 color: $accent;
-                 /* border: 2px solid #ADC431; */
-             }
-         }
-     }
-     
-     .contacts {
-         padding-bottom: 100px;
-         &__inner {
-             box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
-             border: 2px solid #ADC431;
-             margin-bottom: 35px;
-         }
-         &__top {
-             display: flex;
-             justify-content: space-evenly;
-         }
-         &__text-item {
-             margin-bottom: 20px;
-         }
-     }
-     
-     .contacts-top {
-         height: 145px;
-         background-color: #fff;
-         border-bottom: 2px solid $border;
-         &__item {
-             padding: 34px 0;
-             display: flex;
-             flex-direction: column;
-             justify-content: center;
-             align-items: center;
-         }
-         &__item+.contacts-top__item {
-             border-left: 2px solid $border;
-             padding-left: 100px;
-         }
-         &__title {
-             @extend%montserrat-500;
-             font-size: 15px;
-             line-height: 135%;
-             color: #797979;
-         }
-         &__subtitle {
-             color: #797979;
-             font-size: 15px;
-             line-height: 165%;
-         }
-         &__text {
-             @extend%montserrat-700;
-             font-weight: 700;
-             font-size: 18px;
-             line-height: 165%;
-         }
-         &__link {
-             display: block;
-             font-size: 15px;
-             line-height: 165%;
-             text-decoration: underline;
-         }
-     }
-     
-     .footer {
-         color: #FFF;
-         padding: 50px 0 50px;
-         background-color: $accent;
-         &__title {
-             font-weight: 700;
-             font-size: 18px;
-             line-height: 135%;
-             padding: 30px 0;
-             position: relative;
-             &:before {
-                 position: absolute;
-                 content: "";
-                 width: 2px;
-                 height: 300px;
-                 background-color: #fff;
-                 top: 0;
-                 left: -150px;
-             }
-         }
-         &__inner {
-             display: flex;
-             justify-content: space-between;
-             margin-bottom: 50px;
-         }
-         &__adress {
-             max-width: 550px;
-         }
-         &__brands-inner {
-             display: flex;
-         }
-         &__brands-columns {
-             &:nth-child(2) {
+             &__item+.menu__item {
                  padding-left: 80px;
              }
-         }
-         &__menu-item,
-         &__brands-item {
-             margin-bottom: 25px;
-             & a {
-                 color: #FFF;
+             &__phone {
+                 @extend%montserrat-700;
+                 font-size: 18px;
+                 line-height: 22px;
+                 position: relative;
+                 &::before {
+                     content: "";
+                     position: absolute;
+                     background-image: url(images/phone.svg);
+                     width: 21px;
+                     height: 20px;
+                     top: 0;
+                     left: -30px;
+                 }
              }
-             & a:hover {
+             &__btn {
+                 display: none;
+             }
+         }
+         
+         .breaking {
+             background-color: $accent;
+             padding-bottom: 80px;
+             &__inner {
+                 display: grid;
+                 grid-template-columns: repeat(2, 1fr);
+                 grid-gap: 40px;
+             }
+             &__title {
+                 color: #fff;
+             }
+         }
+         
+         .breaking-item {
+             background-color: #fff;
+             min-width: 590px;
+             background-repeat: no-repeat;
+             background-position: bottom right;
+             border: 2px solid #ADC431;
+             &:hover {
+                 box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
+             }
+             &__columns {
+                 width: 210px;
+             }
+             &__link {
+                 z-index: 100;
+                 margin-right: 30px;
+                 margin-top: 20px
+             }
+             &__text {
+                 font-size: 15px;
+                 line-height: 135%;
+                 z-index: 100;
+                 &:hover {
+                     color: $accent;
+                     z-index: 100;
+                 }
+             }
+             &--screen {
+                 background-image: url('../images/breaking-icons/screen.png');
+             }
+             &--battery {
+                 background-image: url('../images/breaking-icons/battery.png');
+             }
+             &--sound {
+                 background-image: url('../images/breaking-icons/sound.png');
+             }
+             &--camera {
+                 background-image: url('../images/breaking-icons/camera.png');
+             }
+             &--button {
+                 background-image: url('../images/breaking-icons/button.png');
+             }
+             &--mic {
+                 background-image: url('../images/breaking-icons/mic.png');
+             }
+             &--sim {
+                 background-image: url('../images/breaking-icons/sim.png');
+             }
+             &--general {
+                 background-image: url('../images/breaking-icons/general.png');
+             }
+             &__inner {
+                 margin-top: 20px;
+                 display: flex;
+                 justify-content: space-around;
+             }
+             &__title {
+                 text-align: left;
+                 padding: 35px 0 20px 79px;
+                 position: relative;
+                 &::before {
+                     content: '';
+                     position: absolute;
+                     width: 30px;
+                     height: 30px;
+                     top: 24px;
+                     left: 18px;
+                 }
+                 &--battery::before {
+                     background-image: url('../images/breaking-icons/icons/battery.svg');
+                 }
+                 &--screen::before {
+                     background-image: url('../images/breaking-icons/icons/screen.svg');
+                 }
+                 &--sound::before {
+                     background-image: url('../images/breaking-icons/icons/sound.svg');
+                 }
+                 &--camera::before {
+                     background-image: url('../images/breaking-icons/icons/camera.svg');
+                 }
+                 &--button::before {
+                     background-image: url('../images/breaking-icons/icons/button.svg');
+                 }
+                 &--mic::before {
+                     background-image: url('../images/breaking-icons/icons/mic.svg');
+                 }
+                 &--sim::before {
+                     background-image: url('../images/breaking-icons/icons/sim.svg');
+                 }
+                 &--general::before {
+                     background-image: url('../images/breaking-icons/icons/general.svg');
+                 }
+             }
+         }
+         
+         .slider-choice {
+             margin: 50px 0;
+             &__item {
+                 border: 2px solid $border;
+                 background-color: #fff;
+                 height: 270px;
+                 width: 366px;
+             }
+             &__item-inner {
+                 padding: 0 30px;
+             }
+             &__item-icon {
+                 padding: 25px 0 25px;
+             }
+             &__item-title {
+                 border-top: 4px solid $accent;
+                 padding: 25px 0 20px;
+             }
+             &__item-text {
+                 font-size: 15px;
+                 line-height: 20px;
+                 padding-bottom: 43px;
+             }
+             &__inner {
+                 padding-bottom: 50px;
+             }
+         }
+         
+         .swiper-pagination {
+             &-bullet {
+                 width: 10px;
+                 height: 10px;
+                 margin: 0 10px;
+                 &-active {
+                     width: 30px;
+                     height: 10px;
+                     border-radius: 5px;
+                     background-color: $accent;
+                 }
+             }
+         }
+         
+         .brands {
+             padding-bottom: 100px;
+             &__inner {
+                 display: grid;
+                 grid-template-columns: repeat(5, 1fr);
+                 grid-gap: 30px;
+                 margin-bottom: 50px;
+             }
+             &__item {
+                 border: 2px solid $border;
+                 width: 220px;
+                 height: 100px;
+                 display: flex;
+                 justify-content: center;
+                 align-items: center;
+                 box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
+                 &:hover {
+                     background-color: $border;
+                 }
+             }
+             &__btn {
+                 display: flex;
+                 justify-content: center;
+             }
+             &__btn-link {
+                 padding: 16px 22px;
+                 @extend%montserrat-700;
+                 background-color: $accent;
+                 font-size: 15px;
+                 line-height: 18px;
+                 color: #fff;
+                 box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
+                 &:hover {
+                     background-color: #fff;
+                     color: $accent;
+                     /* border: 2px solid #ADC431; */
+                 }
+             }
+         }
+         
+         .reviews {
+             padding-bottom: 150px;
+         }
+         
+         .reviews-slider {
+             margin-bottom: 80px;
+             &__item {
+                 border: 2px solid $border;
+                 margin: 25px;
+                 max-width: 560px;
+                 height: 354px;
+                 padding: 35px;
+                 box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
+             }
+             &__item-name {
+                 padding-left: 50px;
+                 @extend%montserrat-700;
+                 font-size: 18px;
+                 line-height: 135%;
+                 position: relative;
+                 &::before {
+                     content: '';
+                     position: absolute;
+                     background-image: url(/images/icons/chat.svg);
+                     width: 30px;
+                     height: 30px;
+                     top: -3px;
+                     left: 0px;
+                 }
+             }
+             &__item-box {
+                 margin: 25px 0;
+                 display: flex;
+             }
+             &__item-date {
+                 padding-right: 30px;
+             }
+             &__item-text {
+                 margin-bottom: 25px;
+                 height: 125px;
+                 font-size: 16px;
+                 line-height: 165%;
+             }
+             &__item-bottom {
+                 padding-right: 20px;
+                 display: flex;
+                 justify-content: flex-end;
+             }
+             &__item-link {
+                 padding-left: 10px;
+                 &:hover {
+                     color: $accent;
+                 }
+             }
+         }
+         
+         .reviews-bottom {
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+             &__link {
+                 height: 50px;
+                 padding: 16px 48px;
+                 @extend%montserrat-700;
+                 background-color: $accent;
+                 font-size: 15px;
+                 line-height: 18px;
+                 text-transform: uppercase;
+                 color: #fff;
+             }
+             &__inner {
+                 display: flex;
+             }
+             &__btn {
+                 border: 2px solid $border;
+                 height: 50px;
+                 margin-left: 20px;
+                 padding: 13px 30px 13px 60px;
+                 display: flex;
+                 align-items: center;
+                 @extend%montserrat-700;
+                 font-size: 15px;
+                 line-height: 18px;
+                 box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
+                 background-color: #fff;
+                 position: relative;
+                 &:hover {
+                     box-shadow: 0px 0px 30px rgba(116, 138, 0, 1);
+                     /* box-shadow: 0px 0px 30px rgb(0, 106, 138); */
+                 }
+                 &::after {
+                     content: '';
+                     position: absolute;
+                     width: 24px;
+                     height: 24px;
+                     top: 13px;
+                     left: 20px;
+                     background-size: cover;
+                 }
+                 &--yandex::after {
+                     background-image: url(/images/icons/yandex.svg);
+                 }
+                 &--google::after {
+                     background-image: url(/images/icons/google.svg);
+                 }
+                 &--2gis::after {
+                     background-image: url(/images/icons/2gis.svg);
+                 }
+             }
+         }
+         
+         .contacts {
+             padding-bottom: 100px;
+             &__inner {
+                 box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
+                 border: 2px solid #ADC431;
+                 margin-bottom: 35px;
+             }
+             &__top {
+                 display: flex;
+                 justify-content: space-evenly;
+             }
+             &__text-item {
+                 margin-bottom: 20px;
+             }
+         }
+         
+         .contacts-top {
+             height: 145px;
+             background-color: #fff;
+             border-bottom: 2px solid $border;
+             &__item {
+                 padding: 34px 0;
+                 display: flex;
+                 flex-direction: column;
+                 justify-content: center;
+                 align-items: center;
+             }
+             &__item+.contacts-top__item {
+                 border-left: 2px solid $border;
+                 padding-left: 100px;
+             }
+             &__title {
+                 @extend%montserrat-500;
+                 font-size: 15px;
+                 line-height: 135%;
+                 color: #797979;
+             }
+             &__subtitle {
+                 color: #797979;
+                 font-size: 15px;
+                 line-height: 165%;
+             }
+             &__text {
+                 @extend%montserrat-700;
+                 font-weight: 700;
+                 font-size: 18px;
+                 line-height: 165%;
+             }
+             &__link {
+                 display: block;
+                 font-size: 15px;
+                 line-height: 165%;
                  text-decoration: underline;
              }
          }
-     }
-     
-     .adress {
-         &__inner {
-             padding-bottom: 10px;
-         }
-         &__slogan {
-             font-size: 16px;
-             line-height: 22px;
-             margin-top: 10px;
-         }
-         &__phone {
-             display: block;
-             @extend%montserrat-700;
-             font-size: 24px;
-             line-height: 165%;
-             padding: 20px 0;
-         }
-         &__text {
-             padding: 20px 0;
-             width: 330px;
-         }
-         &__adress {
-             margin-bottom: 10px;
-         }
-         &__time-work {
-             margin-bottom: 20px;
-         }
-     }
-     
-     .breaking-page {
-         margin: 100px 0 50px;
-         &__inner {
-             box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
-             border: 2px solid $border;
-             display: flex;
-             justify-content: center;
-             padding: 45px 0;
-         }
-         &__box {
-             padding-right: 50px;
-         }
-         &__box-inner {
-             display: flex;
-         }
-         &__image-repair {
-             margin-right: 50px;
-         }
-         &__image-inner {
-             width: 480px;
-             display: flex;
-             justify-content: center;
-             align-items: center;
-         }
-         &__title {
-             @extend%montserrat-700;
-             font-size: 28px;
-             line-height: 135%;
-             text-transform: uppercase;
-             margin-bottom: 30px;
-         }
-         &__headline {
-             margin-bottom: 35px;
-         }
-         &__subtitle {
-             font-weight: 700;
-             font-size: 18px;
-             line-height: 32px;
-             color: #797979;
-             margin-bottom: 5px;
-         }
-         &__price {
-             @extend%montserrat-700;
-             font-size: 24px;
-             line-height: 32px;
-             color: $accent;
-             margin-bottom: 20px;
-         }
-         &__time {
-             @extend%montserrat-700;
-             font-size: 24px;
-             line-height: 32px;
-             color: $accent;
-             margin-bottom: 36px;
-         }
-         &__link {
-             padding: 16px 42px;
+         
+         .footer {
              color: #FFF;
+             padding: 50px 0 50px;
              background-color: $accent;
-         }
-         &__phone,
-         &__adress {
-             @extend%montserrat-700;
-             font-size: 18px;
-             line-height: 32px;
-             display: block;
-         }
-         &__phone {
-             margin-bottom: 20px;
-         }
-     }
-     
-     .repair {
-         margin-bottom: 100px;
-         &__inner {
-             background-image: url('/images/repair.png');
-             /* background-size: cover; */
-             background-repeat: no-repeat;
-             background-position: bottom right;
-             box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
-             border: 2px solid $border;
-             display: flex;
-             justify-content: space-between;
-             padding: 45px 52px;
-         }
-         &__columns-title {
-             margin-bottom: 30px;
-         }
-         &__columns-text {
-             width: 390px;
-             margin-bottom: 40px;
-             font-size: 15px;
-             line-height: 25px;
-         }
-         &__columns-phone {
-             display: block;
-             font-size: 24px;
-             line-height: 30px;
-             margin-bottom: 20px;
-         }
-         &__columns-form {
-             width: 300px;
-             & input {
-                 width: 300px;
-                 height: 50px;
-                 margin-bottom: 40px;
-                 border: 2px solid $border;
-                 padding-left: 20px;
+             &__title {
+                 font-weight: 700;
+                 font-size: 18px;
+                 line-height: 135%;
+                 padding: 30px 0;
+                 position: relative;
+                 &:before {
+                     position: absolute;
+                     content: "";
+                     width: 2px;
+                     height: 300px;
+                     background-color: #fff;
+                     top: 0;
+                     left: -150px;
+                 }
              }
-             & textarea {
-                 min-width: 300px;
-                 min-height: 140px;
-                 resize: none;
+             &__inner {
+                 display: flex;
+                 justify-content: space-between;
+                 margin-bottom: 50px;
+             }
+             &__adress {
+                 max-width: 550px;
+             }
+             &__brands-inner {
+                 display: flex;
+             }
+             &__brands-columns {
+                 &:nth-child(2) {
+                     padding-left: 80px;
+                 }
+             }
+             &__menu-item,
+             &__brands-item {
+                 margin-bottom: 25px;
+                 & a {
+                     color: #FFF;
+                 }
+                 & a:hover {
+                     text-decoration: underline;
+                 }
+             }
+         }
+         
+         .adress {
+             &__inner {
+                 padding-bottom: 10px;
+             }
+             &__slogan {
+                 font-size: 16px;
+                 line-height: 22px;
+                 margin-top: 10px;
+             }
+             &__phone {
+                 display: block;
+                 @extend%montserrat-700;
+                 font-size: 24px;
+                 line-height: 165%;
+                 padding: 20px 0;
+             }
+             &__text {
+                 padding: 20px 0;
+                 width: 330px;
+             }
+             &__adress {
+                 margin-bottom: 10px;
+             }
+             &__time-work {
+                 margin-bottom: 20px;
+             }
+         }
+         
+         .breaking-page {
+             margin: 100px 0 50px;
+             &__inner {
+                 box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
                  border: 2px solid $border;
-                 padding-top: 10px;
-                 padding-left: 20px;
+                 display: flex;
+                 justify-content: center;
+                 padding: 45px 0;
+             }
+             &__box {
+                 padding-right: 50px;
+             }
+             &__box-inner {
+                 display: flex;
+             }
+             &__image-repair {
+                 margin-right: 50px;
+             }
+             &__image-inner {
+                 width: 480px;
+                 display: flex;
+                 justify-content: center;
+                 align-items: center;
+             }
+             &__title {
+                 @extend%montserrat-700;
+                 font-size: 28px;
+                 line-height: 135%;
+                 text-transform: uppercase;
                  margin-bottom: 30px;
              }
+             &__headline {
+                 margin-bottom: 35px;
+             }
+             &__subtitle {
+                 font-weight: 700;
+                 font-size: 18px;
+                 line-height: 32px;
+                 color: #797979;
+                 margin-bottom: 5px;
+             }
+             &__price {
+                 @extend%montserrat-700;
+                 font-size: 24px;
+                 line-height: 32px;
+                 color: $accent;
+                 margin-bottom: 20px;
+             }
+             &__time {
+                 @extend%montserrat-700;
+                 font-size: 24px;
+                 line-height: 32px;
+                 color: $accent;
+                 margin-bottom: 36px;
+             }
+             &__link {
+                 padding: 16px 42px;
+                 color: #FFF;
+                 background-color: $accent;
+             }
+             &__phone,
+             &__adress {
+                 @extend%montserrat-700;
+                 font-size: 18px;
+                 line-height: 32px;
+                 display: block;
+             }
+             &__phone {
+                 margin-bottom: 20px;
+             }
          }
-         &__columns-btn {
-             padding: 15px 82px;
-             background-color: $accent;
-             border: none;
-             color: #FFF;
-             @extend%montserrat-700;
-             font-size: 15px;
-             line-height: 20px;
+         
+         .repair {
+             margin-bottom: 100px;
+             &__inner {
+                 background-image: url('/images/repair.png');
+                 /* background-size: cover; */
+                 background-repeat: no-repeat;
+                 background-position: bottom right;
+                 box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
+                 border: 2px solid $border;
+                 display: flex;
+                 justify-content: space-between;
+                 padding: 45px 52px;
+             }
+             &__columns-title {
+                 margin-bottom: 30px;
+             }
+             &__columns-text {
+                 width: 390px;
+                 margin-bottom: 40px;
+                 font-size: 15px;
+                 line-height: 25px;
+             }
+             &__columns-phone {
+                 display: block;
+                 font-size: 24px;
+                 line-height: 30px;
+                 margin-bottom: 20px;
+             }
+             &__columns-form {
+                 width: 300px;
+                 & input {
+                     width: 300px;
+                     height: 50px;
+                     margin-bottom: 40px;
+                     border: 2px solid $border;
+                     padding-left: 20px;
+                 }
+                 & textarea {
+                     min-width: 300px;
+                     min-height: 140px;
+                     resize: none;
+                     border: 2px solid $border;
+                     padding-top: 10px;
+                     padding-left: 20px;
+                     margin-bottom: 30px;
+                 }
+             }
+             &__columns-btn {
+                 padding: 15px 82px;
+                 background-color: $accent;
+                 border: none;
+                 color: #FFF;
+                 @extend%montserrat-700;
+                 font-size: 15px;
+                 line-height: 20px;
+             }
+             &__phone {
+                 display: block;
+                 font-size: 36px;
+                 line-height: 30px;
+                 margin-bottom: 20px
+             }
          }
-         &__phone {
-             display: block;
-             font-size: 36px;
-             line-height: 30px;
-             margin-bottom: 20px
-         }
-     }
-     
-     .price {
-         margin-bottom: 100px;
-         &__inner {
-             box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
-         }
-         &__inner-title {
-             display: flex;
-             /*   justify-content: space-between; */
-             padding: 25px 45px;
-             background-color: $accent;
-             @extend%montserrat-700;
-             font-size: 18px;
-             line-height: 24px;
-             color: #FFFFFF;
-         }
-         &__item-title {
-             min-width: 350px;
-         }
-         &__service-line {
-             display: flex;
-             padding: 25px 45px;
-             @extend%montserrat-500;
-             font-size: 15px;
-             line-height: 20px;
-             &:hover {
+         
+         .price {
+             margin-bottom: 100px;
+             &__inner {
+                 box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
+             }
+             &__inner-title {
+                 display: flex;
+                 /*   justify-content: space-between; */
+                 padding: 25px 45px;
+                 background-color: $accent;
+                 @extend%montserrat-700;
+                 font-size: 18px;
+                 line-height: 24px;
+                 color: #FFFFFF;
+             }
+             &__item-title {
+                 min-width: 350px;
+             }
+             &__service-line {
+                 display: flex;
+                 padding: 25px 45px;
+                 @extend%montserrat-500;
+                 font-size: 15px;
+                 line-height: 20px;
+                 &:hover {
+                     color: #FFF;
+                     background-color: $accent;
+                 }
+             }
+             &__item-service {
+                 min-width: 350px;
+             }
+             &__btn-load {
+                 display: block;
+                 text-align: center;
+                 padding: 16px 42px;
                  color: #FFF;
                  background-color: $accent;
              }
          }
-         &__item-service {
-             min-width: 350px;
-         }
-         &__btn-load {
-             display: block;
-             text-align: center;
-             padding: 16px 42px;
-             color: #FFF;
-             background-color: $accent;
-         }
-     }
-     
-     @import 'media';
+         
+         @import 'media';
