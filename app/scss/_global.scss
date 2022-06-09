@@ -28,3 +28,10 @@
         line-height: 24px;
         @extend%montserrat-700;
     }
+    
+    .hidden {
+        &__title,
+        &__headline {
+            display: none;
+        }
+    }

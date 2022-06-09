@@ -272,12 +272,12 @@
          }
          
          .reviews-slider {
-             margin-bottom: 80px;
+             margin-bottom: 50px;
+             padding-bottom: 50px;
              &__item {
                  border: 2px solid $border;
-                 margin: 25px;
-                 max-width: 560px;
-                 height: 354px;
+                 width: 590px;
+                 height: 300px;
                  padding: 35px;
                  box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
              }
@@ -317,9 +317,8 @@
              }
              &__item-link {
                  padding-left: 10px;
-                 &:hover {
-                     color: $accent;
-                 }
+                 color: $accent;
+                 font-size: 12px;
              }
          }
          
@@ -328,6 +327,8 @@
              justify-content: space-between;
              align-items: center;
              &__link {
+                 display: flex;
+                 justify-content: center;
                  height: 50px;
                  padding: 16px 48px;
                  @extend%montserrat-700;
@@ -339,6 +340,7 @@
              }
              &__inner {
                  display: flex;
+                 justify-content: center;
              }
              &__btn {
                  border: 2px solid $border;
@@ -380,14 +382,14 @@
          
          .contacts {
              padding-bottom: 100px;
+             &__map--frame {
+                 max-width: 1220px;
+                 height: 400px;
+             }
              &__inner {
                  box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
                  border: 2px solid #ADC431;
                  margin-bottom: 35px;
-             }
-             &__top {
-                 display: flex;
-                 justify-content: space-evenly;
              }
              &__text-item {
                  margin-bottom: 20px;
@@ -395,6 +397,8 @@
          }
          
          .contacts-top {
+             display: flex;
+             justify-content: space-evenly;
              height: 145px;
              background-color: #fff;
              border-bottom: 2px solid $border;
@@ -511,74 +515,92 @@
          }
          
          .breaking-page {
-             margin: 100px 0 50px;
              &__inner {
-                 box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
                  border: 2px solid $border;
-                 display: flex;
-                 justify-content: center;
-                 padding: 45px 0;
              }
              &__box {
-                 padding-right: 50px;
+                 display: flex;
+                 height: 360px;
+             }
+             &__image {
+                 margin-top: auto;
+                 width: 100%;
+                 max-width: 420px;
+                 height: 320px;
+                 &-adaptive {
+                     display: none;
+                 }
              }
              &__box-inner {
-                 display: flex;
+                 border-left: 2px solid $border;
+                 padding-left: 90px;
              }
-             &__image-repair {
-                 margin-right: 50px;
-             }
-             &__image-inner {
-                 width: 480px;
-                 display: flex;
-                 justify-content: center;
-                 align-items: center;
+             &__heading-inner {
+                 padding-top: 20px;
              }
              &__title {
-                 @extend%montserrat-700;
+                 font-weight: 700;
                  font-size: 28px;
                  line-height: 135%;
                  text-transform: uppercase;
-                 margin-bottom: 30px;
-             }
-             &__headline {
-                 margin-bottom: 35px;
+                 margin-bottom: 10px;
              }
              &__subtitle {
+                 margin-bottom: 32px;
+                 font-weight: 500;
+                 font-size: 18px;
+             }
+             &__columns {
+                 &-inner {
+                     display: flex;
+                 }
+                 &-right {
+                     padding-left: 120px;
+                 }
+             }
+             /* &__box {} */
+             &__text {
                  font-weight: 700;
                  font-size: 18px;
-                 line-height: 32px;
+                 line-height: 135%;
                  color: #797979;
                  margin-bottom: 5px;
              }
-             &__price {
-                 @extend%montserrat-700;
+             &__price,
+             &__worktime {
+                 display: block;
+                 font-weight: 700;
                  font-size: 24px;
-                 line-height: 32px;
-                 color: $accent;
-                 margin-bottom: 20px;
-             }
-             &__time {
-                 @extend%montserrat-700;
-                 font-size: 24px;
-                 line-height: 32px;
-                 color: $accent;
-                 margin-bottom: 36px;
-             }
-             &__link {
-                 padding: 16px 42px;
-                 color: #FFF;
-                 background-color: $accent;
+                 line-height: 135%;
+                 /* or 32px */
+                 color: #ADC431;
+                 padding-bottom: 25px;
              }
              &__phone,
              &__adress {
-                 @extend%montserrat-700;
-                 font-size: 18px;
-                 line-height: 32px;
                  display: block;
+                 font-weight: 700;
+                 font-size: 18px;
+                 line-height: 22px;
+                 padding-bottom: 35px;
              }
-             &__phone {
-                 margin-bottom: 20px;
+             &__link {
+                 padding: 16px 42px;
+                 background-color: #ADC431;
+                 color: #FFF;
+                 font-weight: 700;
+                 font-size: 15px;
+                 line-height: 18px;
+                 &:hover {
+                     box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
+                 }
+             }
+             &__call {
+                 padding: 12px 38px;
+                 border: 2px solid $border;
+                 &:hover {
+                     box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
+                 }
              }
          }
          

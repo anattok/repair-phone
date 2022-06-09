@@ -51,3 +51,18 @@ let swiper = new Swiper('.slider-choice__inner', {
 
 
 });
+
+let reviewsSwiper = new Swiper('.reviews__slider', {
+
+    centeredSlides: true,
+    slidesPerView: "auto",
+    spaceBetween: 44,
+    loop: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+
+
+
+});

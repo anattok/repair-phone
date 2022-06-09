@@ -10,30 +10,38 @@
 </head>
 
 <body>
+
     <header class="header">
         <div class="container">
-            <div class="header__top">
-                <a class="logo" href="index.html"><img src="images/logo.png" width="250px" height="60px" alt="Ремонт телефонов доктор гаджет"></a>
-                <nav class="menu">
-                    <ul class="menu__list">
-                        <li class="menu__item">
-                            <a class="menu__link" href="index.html">Главная </a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="breakdowns.html">Поломки</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="brands.html">Бренды</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="index.html">Новости</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="contacts.html">Контакты</a>
-                        </li>
-                    </ul>
-                </nav>
-                <a class="menu__phone" href="tel:+79528119728">+7 (952) 811-97-28</a>
+            <div class="header__top-wrapper">
+                <div class="header__top">
+                    <a class="logo" href="index.html"><img src="images/logo-2.svg" alt="Ремонт телефонов доктор гаджет" width="200px" height="50px"></a>
+                    <nav class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a class="menu__link" href="index.html">Главная </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="breakdowns.html">Поломки</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="brands.html">Бренды</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="index.html">Новости</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="contacts.html">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <a class="menu__phone" href="tel:+79528119728">+7 (952) 811-97-28</a>
+                </div>
+                <div class="header__berger-menu">
+                    <button class="menu__btn">
+                             <img src="images/menu-btn.svg" alt="">
+                        </button>
+                </div>
             </div>
         </div>
     </header>
@@ -41,26 +49,35 @@
         <section class="breaking-page">
             <div class="container">
                 <div class="breaking-page__inner">
-                    <div class="breaking-page__image-inner breaking-page__image-repair">
-                        <img class="breaking-page__image" alt="" src="images/breaking-page/sound.jpg">
-                    </div>
                     <div class="breaking-page__box">
-                        <div class="breaking-page__title">Ремонт динамиков в телефоне</div>
-                        <div class="breaking-page__headline">Сервисный центр "Доктор Гаджет"</div>
-
+                        <img class="breaking-page__image" alt="" src="images/breaking-page/sound.jpg">
                         <div class="breaking-page__box-inner">
-                            <div class="breaking-page__box-columns">
-                                <p class="breaking-page__subtitle">Стоимость:</p>
-                                <p class="breaking-page__price">От 1000р</p>
-                                <p class="breaking-page__subtitle">Время работы:</p>
-                                <p class="breaking-page__time">От 30 мин</p>
-                                <a class="breaking-page__link" href="#">Оставить заявку</a>
+                            <div class="breaking-page__heading-inner">
+                                <div class="breaking-page__title">Ремонт динамиков в телефоне</div>
+                                <div class="breaking-page__subtitle">Сервисный центр "Доктор Гаджет"</div>
+                                <img class="breaking-page__image-adaptive" alt="" src="images/breaking-page/sound.jpg">
                             </div>
-                            <div class="breaking-page__box-columns">
-                                <p class="breaking-page__subtitle">Телефон:</p>
-                                <a class="breaking-page__phone" href="tel:+79528119728">+7 (952) 811-97-28</a>
-                                <p class="breaking-page__subtitle">Адрес:</p>
-                                <p class="breaking-page__adress">2-я Целиноградская ул., 13</p>
+                            <div class="breaking-page__columns-inner">
+                                <div class="breaking-page__columns">
+                                    <div class="breaking-page__wrap">
+                                        <div class="breaking-page__wrap-price">
+                                            <p class="breaking-page__text">Стоимость:</p>
+                                            <p class="breaking-page__price">От 1000р</p>
+                                        </div>
+                                        <div class="breaking-page__wrap-worktime">
+                                            <p class="breaking-page__text">Время работы:</p>
+                                            <p class="breaking-page__worktime">От 30 мин</p>
+                                        </div>
+                                    </div>
+                                    <a class="breaking-page__link" href="#">Оставить заявку</a>
+                                </div>
+                                <div class="breaking-page__columns breaking-page__columns-right">
+                                    <p class="breaking-page__text">Телефон:</p>
+                                    <a class="breaking-page__phone" href="tel:+79528119728">+7 (952) 811-97-28</a>
+                                    <p class="breaking-page__text">Адрес:</p>
+                                    <p class="breaking-page__adress">2-я Целиноградская ул., 13</p>
+                                    <a class="breaking-page__call" href="tel:+79528119728">Позвонить сейчас</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -68,46 +85,54 @@
             </div>
         </section>
 
+
+
+
+
         <section class="slider-choice">
-            <div class="container-slider">
+            <div class="container">
                 <h3 class="slider-choice__title title">Почему выбирают "Доктор Гаджет"</h3>
-                <div class="slider-choice__inner">
-                    <div class="slider-choice__item ">
-                        <div class="slider-choice__item-inner">
-                            <img class="slider-choice__item-icon" src="images/icons/time.svg" alt="">
-                            <h5 class="slider-choice__item-title item__title">Качество и скорость работы</h5>
-                            <p class="slider-choice__item-text">Время ремонта в нашем сервисном центре занимает от 30 минут</p>
+                <div class="slider-choice__inner swiper">
+                    <div class="swiper-wrapper">
+                        <div class="slider-choice__item swiper-slide">
+                            <div class="slider-choice__item-inner">
+                                <img class="slider-choice__item-icon" src="images/icons/time.svg" alt="">
+                                <h5 class="slider-choice__item-title item__title">Скорость работы</h5>
+                                <p class="slider-choice__item-text">Время ремонта в нашем сервисном центре занимает от 30 минут</p>
+                            </div>
+                        </div>
+                        <div class="slider-choice__item swiper-slide">
+                            <div class="slider-choice__item-inner">
+                                <img class="slider-choice__item-icon" src="images/icons/dollar.svg" alt="">
+                                <h5 class="slider-choice__item-title item__title">Стоимость работы</h5>
+                                <p class="slider-choice__item-text">Стоимоть работ нижу конкурентов, экономим средства клиентов</p>
+                            </div>
+                        </div>
+                        <div class="slider-choice__item swiper-slide">
+                            <div class="slider-choice__item-inner">
+                                <img class="slider-choice__item-icon" src="images/icons/setings.svg" alt="">
+                                <h5 class="slider-choice__item-title item__title">Оригинальные запчасти</h5>
+                                <p class="slider-choice__item-text">Для ремонта используем оригинальные запчасти, либо аналоги</p>
+                            </div>
+                        </div>
+                        <div class="slider-choice__item swiper-slide">
+                            <div class="slider-choice__item-inner">
+                                <img class="slider-choice__item-icon" src="images/icons/work-time.svg" alt="">
+                                <h5 class="slider-choice__item-title item__title">Режим работы</h5>
+                                <p class="slider-choice__item-text">Пн-Сб: с 10 до 19 Вс: Выходной</p>
+                            </div>
+                        </div>
+                        <div class="slider-choice__item swiper-slide">
+                            <div class="slider-choice__item-inner">
+                                <img class="slider-choice__item-icon" src="images/icons/master.svg" alt="">
+                                <h5 class="slider-choice__item-title item__title">Опытные мастера</h5>
+                                <p class="slider-choice__item-text">Квалифицированные инженеры с опытом работы от 5 лет</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="slider-choice__item ">
-                        <div class="slider-choice__item-inner">
-                            <img class="slider-choice__item-icon" src="images/icons/dollar.svg" alt="">
-                            <h5 class="slider-choice__item-title item__title">Доступная стоимость работы</h5>
-                            <p class="slider-choice__item-text">Стоимоть работ нижу конкурентов, экономим средства клиентов</p>
-                        </div>
-                    </div>
-                    <div class="slider-choice__item ">
-                        <div class="slider-choice__item-inner">
-                            <img class="slider-choice__item-icon" src="images/icons/setings.svg" alt="">
-                            <h5 class="slider-choice__item-title item__title">Оригинальные запчасти</h5>
-                            <p class="slider-choice__item-text">Для ремонта используем оригинальные запчасти, либо аналоги</p>
-                        </div>
-                    </div>
-                    <div class="slider-choice__item ">
-                        <div class="slider-choice__item-inner">
-                            <img class="slider-choice__item-icon" src="images/icons/work-time.svg" alt="">
-                            <h5 class="slider-choice__item-title item__title">Режим работы</h5>
-                            <p class="slider-choice__item-text">Пн-Сб: с 10 до 19 Вс: Выходной</p>
-                        </div>
-                    </div>
-                    <div class="slider-choice__item ">
-                        <div class="slider-choice__item-inner">
-                            <img class="slider-choice__item-icon" src="images/icons/master.svg" alt="">
-                            <h5 class="slider-choice__item-title item__title">Опытные мастера</h5>
-                            <p class="slider-choice__item-text">Квалифицированные инженеры с опытом работы от 5 лет</p>
-                        </div>
-                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
+
             </div>
         </section>
         <section class="brands">
