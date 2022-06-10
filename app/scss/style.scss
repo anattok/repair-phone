@@ -78,6 +78,11 @@
              }
          }
          
+         .logo {
+             min-width: 300px;
+             min-height: 10px;
+         }
+         
          .breaking {
              background-color: $accent;
              padding-bottom: 80px;
@@ -142,7 +147,7 @@
                  background-image: url('../images/breaking-icons/general.png');
              }
              &__inner {
-                 margin-top: 20px;
+                 margin: 20px 0;
                  display: flex;
                  justify-content: space-around;
              }
@@ -517,6 +522,7 @@
          .breaking-page {
              &__inner {
                  border: 2px solid $border;
+                 margin-top: 40px;
              }
              &__box {
                  display: flex;

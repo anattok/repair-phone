@@ -2,7 +2,8 @@ $(function() {
 
     /*БУРГЕР МЕНЮ НА JQUERY*/
     $('.menu__btn').on('click', function() {
-        $('.menu__list').toggleClass('menu__list--active');
+        $('.header__top').toggleClass('header__top--active');
+        $('.header__burger-menu').toggleClass('header__burger-menu--active');
     });
 
 });

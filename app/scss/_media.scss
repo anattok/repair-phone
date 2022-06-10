@@ -99,10 +99,6 @@
                      box-shadow: 0px 0px 30px rgb(116 138 0 / 20%);
                  }
              }
-             .logo {
-                 min-width: 200px;
-                 min-height: 10px;
-             }
              .menu {
                  &__item+.menu__item {
                      padding-left: 40px;
@@ -112,7 +108,6 @@
                  }
              }
          }
-         /*tablets and small desktops */
          
          @media (max-width: 992px) {
              .header {
@@ -132,6 +127,32 @@
                      line-height: 42px;
                  }
              }
+             .header__top.header__top--active .menu__list {
+                 transform: translateY(-0%);
+             }
+             .header__top.header__top--active path {
+                 fill: white;
+             }
+             .header__top.header__top--active .menu__btn rect {
+                 fill: white;
+             }
+             .header__top.header__top--active ul.menu__list {
+                 background-color: $accent;
+                 padding: 80px 0 15px;
+             }
+             .header__burger-menu.header__burger-menu--active path {
+                 fill: white;
+             }
+             .logo,
+             .menu__btn {
+                 position: relative;
+                 z-index: 900;
+             }
+             .breaking {
+                 &__inner {
+                     grid-gap: 20px;
+                 }
+             }
              .menu {
                  &__list {
                      transform: translateY(-200%);
@@ -142,12 +163,12 @@
                      right: 0;
                      left: 0;
                      text-align: center;
-                     top: 100px;
+                     top: 0;
                      z-index: 20;
                  }
-                 &__list.menu__list--active {
+                 /* &__list.menu__list--active {
                      transform: translateY(-0%);
-                 }
+                 } */
                  &__item {
                      padding: 15px 0;
                      background-color: $accent;
@@ -165,13 +186,8 @@
                      background-color: transparent;
                      border: none;
                      padding: 0;
-                     margin-top: 40px;
+                     margin-top: 17px;
                      margin-right: 35px;
-                 }
-             }
-             .breaking {
-                 &__inner {
-                     grid-gap: 20px;
                  }
              }
              .breaking-item {
