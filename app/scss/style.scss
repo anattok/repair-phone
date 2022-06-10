@@ -54,6 +54,9 @@
                  @extend%montserrat-500;
                  font-size: 15px;
                  line-height: 18px;
+                 &:hover {
+                     border-bottom: 3px solid #ADC431;
+                 }
              }
              &__item+.menu__item {
                  padding-left: 80px;
@@ -295,7 +298,7 @@
                  &::before {
                      content: '';
                      position: absolute;
-                     background-image: url(/images/icons/chat.svg);
+                     background-image: url('../images/icons/chat.svg');
                      width: 30px;
                      height: 30px;
                      top: -3px;
@@ -374,13 +377,13 @@
                      background-size: cover;
                  }
                  &--yandex::after {
-                     background-image: url(/images/icons/yandex.svg);
+                     background-image: url('../images/icons/yandex.svg');
                  }
                  &--google::after {
-                     background-image: url(/images/icons/google.svg);
+                     background-image: url('../images/icons/google.svg');
                  }
                  &--2gis::after {
-                     background-image: url(/images/icons/2gis.svg);
+                     background-image: url('../images/icons/2gis.svg');
                  }
              }
          }
@@ -607,6 +610,104 @@
                  &:hover {
                      box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
                  }
+             }
+         }
+         
+         .brands-page {
+             margin: 40px 0;
+             &__inner {
+                 border: 2px solid $border;
+                 padding: 40px 0;
+             }
+             &__box {
+                 display: flex;
+                 justify-content: space-between;
+                 /* height: 360px; */
+             }
+             &__image {
+                 width: 350px;
+                 height: 350px;
+                 &-adaptive {
+                     display: none;
+                 }
+             }
+             &__box-inner {
+                 /* border-left: 2px solid $border; */
+                 padding-left: 90px;
+                 padding-right: 80px;
+             }
+             &__title {
+                 font-weight: 700;
+                 font-size: 28px;
+                 line-height: 135%;
+                 text-transform: uppercase;
+                 margin-bottom: 10px;
+             }
+             &__subtitle {
+                 margin-bottom: 32px;
+                 font-weight: 500;
+                 font-size: 18px;
+             }
+             &__columns {
+                 &-inner {
+                     display: flex;
+                     justify-content: space-between;
+                 }
+                 &-right {
+                     padding-left: 120px;
+                 }
+             }
+             &__text {
+                 font-weight: 700;
+                 font-size: 18px;
+                 line-height: 135%;
+                 color: #797979;
+             }
+             &__price,
+             &__worktime {
+                 display: block;
+                 font-weight: 700;
+                 font-size: 24px;
+                 line-height: 22px;
+                 color: #ADC431;
+             }
+             &__phone,
+             &__adress {
+                 display: block;
+                 font-weight: 700;
+                 font-size: 18px;
+                 line-height: 22px;
+             }
+             &__link {
+                 display: block;
+                 text-align: center;
+                 padding: 16px 42px;
+                 background-color: #ADC431;
+                 color: #FFF;
+                 font-weight: 700;
+                 font-size: 15px;
+                 line-height: 18px;
+                 &:hover {
+                     box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
+                 }
+             }
+             &__call {
+                 text-align: center;
+                 display: block;
+                 padding: 14px 38px;
+                 border: 2px solid $border;
+                 &:hover {
+                     box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
+                 }
+             }
+             &__text {
+                 margin-bottom: 20px;
+             }
+             &__wrap-price,
+             &__wrap-worktime,
+             &__wrap-phone,
+             &__wrap-adress {
+                 margin-bottom: 20px;
              }
          }
          
