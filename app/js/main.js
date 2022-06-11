@@ -34,7 +34,7 @@ accordion();
 /* НАСТРОЙКА И ПОДКЛЮЧЕНИЕ SLIDER SWIPER*/
 
 
-
+/*КОД СЛАЙДЕРА "ПОЧЕМУ ВЫБИРАЮТ" */
 let swiper = new Swiper('.slider-choice__inner', {
 
     centeredSlides: true,
@@ -45,14 +45,14 @@ let swiper = new Swiper('.slider-choice__inner', {
         el: '.swiper-pagination',
         clickable: true,
     },
-    /* autoplay: {
+    autoplay: {
         delay: 2500,
         disableOnInteraction: false,
-    }, */
+    },
 
 
 });
-
+/*КОД СЛАЙДЕРА "ОТЗЫВЫ" */
 let reviewsSwiper = new Swiper('.reviews__slider', {
 
     centeredSlides: true,
@@ -66,4 +66,20 @@ let reviewsSwiper = new Swiper('.reviews__slider', {
 
 
 
+});
+
+/*КОД КНОПКИ "НАВЕРХ" */
+let btn = $('.button-up');
+
+$(window).scroll(function() {
+    if ($(window).scrollTop() > 300) {
+        btn.addClass('show');
+    } else {
+        btn.removeClass('show');
+    }
+});
+
+btn.on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, '300');
 });

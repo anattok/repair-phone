@@ -1,539 +1,587 @@
-            /* Large desktops and laptops */
-            
-            @media (min-width: 1200px) {
-                .header {
-                    &__image-bg-small {
-                        display: none;
-                    }
+        /* Large desktops and laptops */
+        
+        @media (min-width: 1200px) {
+            .header {
+                &__image-bg-small {
+                    display: none;
                 }
             }
-            
-            @media (max-width: 1280px) {
-                .breaking-item {
-                    min-width: 300px;
-                    &__inner {
-                        padding-left: 30px;
-                    }
+        }
+        
+        @media (max-width: 1280px) {
+            .breaking-item {
+                min-width: 300px;
+                &__inner {
+                    padding-left: 30px;
                 }
-                .brands {
-                    padding-bottom: 100px;
-                    &__inner {
-                        display: grid;
-                        grid-template-columns: repeat(4, 1fr);
-                        grid-gap: 30px;
-                        margin-bottom: 50px;
-                    }
-                    &__item {
+            }
+            .brands {
+                padding-bottom: 100px;
+                &__inner {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-gap: 30px;
+                    margin-bottom: 50px;
+                }
+                &__item {
+                    width: auto;
+                }
+            }
+            .breaking-page {
+                &__columns-right {
+                    padding-left: 40px;
+                }
+            }
+            .brands-page {
+                &__price,
+                &__worktime {
+                    font-size: 18px;
+                    line-height: 22px;
+                }
+                &__phone,
+                &__adress {
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+                &__box-inner {
+                    padding-left: 0;
+                }
+            }
+        }
+        
+        @media (max-width: 1080px) {
+            .breaking-item {
+                &__text {
+                    max-width: 210px;
+                }
+            }
+            .reviews-bottom {
+                display: block;
+                &__inner {
+                    margin-top: 30px;
+                    margin-left: -20px;
+                }
+            }
+            .footer {
+                &__title:before {
+                    display: none;
+                    font-size: 18px;
+                }
+            }
+            .breaking-page {
+                &__box-inner {
+                    padding-left: 20px;
+                }
+                &__box {
+                    height: 320px;
+                }
+                &__title {
+                    font-size: 24px;
+                }
+                &__link {
+                    padding: 10px 28px;
+                }
+                &__call {
+                    padding: 8px 24px;
+                }
+                &__price,
+                &__worktime {
+                    font-size: 18px;
+                }
+                &__phone,
+                &__adress {
+                    font-size: 18px;
+                    padding-bottom: 28px;
+                }
+            }
+            .brands-page {
+                &__price,
+                &__worktime {
+                    font-size: 18px;
+                    line-height: 22px;
+                }
+                &__phone,
+                &__adress {
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+                &__box-inner {
+                    padding-left: 0;
+                }
+                &__link {
+                    padding: 10px 30px;
+                    font-size: 12px;
+                }
+                &__call {
+                    padding: 8px 30px;
+                    font-size: 14px;
+                }
+            }
+            .order-form {
+                &__inner {
+                    flex-flow: wrap;
+                    display: flex;
+                    justify-content: center;
+                }
+                &__text {
+                    max-width: 600px;
+                }
+                &__form {
+                    padding-left: 0;
+                    margin-bottom: 30px;
+                    order: 1;
+                }
+                &__img {
+                    order: 2;
+                    margin-bottom: 30px;
+                }
+                &__columns-phone {
+                    order: 3;
+                }
+                &__img {
+                    height: auto;
+                    padding-left: 50px;
+                }
+                &__columns-phone {
+                    text-align: center;
+                }
+            }
+        }
+        
+        @media (min-width: 992px) and (max-width: 1199px) {
+            .header {
+                &__image-bg-small {
+                    display: none;
+                }
+                &__text {
+                    margin-top: 100px;
+                    padding: 0 50px;
+                }
+                &__btn {
+                    padding: 12px 36px;
+                    background-color: #748a00;
+                    font-size: 15px;
+                    line-height: 18px;
+                    color: #fff;
+                    box-shadow: 0px 0px 30px rgb(116 138 0 / 20%);
+                }
+            }
+            .menu {
+                &__item+.menu__item {
+                    padding-left: 40px;
+                }
+                &__btn {
+                    display: none;
+                }
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .header {
+                &__top {
+                    display: block;
+                }
+                &__top-wrapper {
+                    display: flex;
+                    justify-content: space-between;
+                }
+                &__image-bg-small {
+                    display: none;
+                }
+                &__title {
+                    margin-bottom: 40px;
+                    font-size: 36px;
+                    line-height: 42px;
+                }
+            }
+            .header__top.header__top--active .menu__list {
+                transform: translateY(-0%);
+            }
+            .header__top.header__top--active path {
+                fill: white;
+            }
+            .header__top.header__top--active .menu__btn rect {
+                fill: white;
+            }
+            .header__top.header__top--active ul.menu__list {
+                background-color: $accent;
+                padding: 80px 0 15px;
+            }
+            .header__burger-menu.header__burger-menu--active path {
+                fill: white;
+            }
+            .logo,
+            .menu__btn {
+                position: relative;
+                z-index: 900;
+            }
+            .logo svg {
+                width: 225px;
+                height: 50px;
+            }
+            .breaking {
+                &__inner {
+                    grid-gap: 20px;
+                }
+            }
+            .menu {
+                &__list {
+                    transform: translateY(-200%);
+                    transition: all .5s;
+                    display: block;
+                    padding-left: 0;
+                    position: absolute;
+                    right: 0;
+                    left: 0;
+                    text-align: center;
+                    top: 0;
+                    z-index: 20;
+                }
+                &__item {
+                    padding: 15px 0;
+                    background-color: $accent;
+                    border-bottom: 2px solid $secondary;
+                }
+                &__link {
+                    color: #fff;
+                    font-size: 18px;
+                }
+                &__item+.menu__item {
+                    padding-left: 0px;
+                }
+                &__btn {
+                    display: block;
+                    background-color: transparent;
+                    border: none;
+                    padding: 0;
+                    margin-top: 25px;
+                    margin-right: 35px;
+                }
+                &__phone {
+                    margin-left: 20px;
+                }
+            }
+            .breaking-item {
+                &__inner {
+                    display: block;
+                }
+                &__columns {
+                    margin-left: 30px;
+                }
+            }
+            .brands {
+                padding-bottom: 100px;
+                &__inner {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-gap: 30px;
+                    margin-bottom: 50px;
+                }
+            }
+            .reviews {
+                padding-bottom: 25px;
+            }
+            .contacts-top {
+                height: auto;
+                &__item+.contacts-top__item {
+                    padding-left: 0;
+                    border-left: 0;
+                }
+                &__text {
+                    font-weight: 700;
+                    font-size: 14px;
+                }
+            }
+            .breaking-page {
+                &__box {
+                    display: block;
+                    height: auto;
+                }
+                &__image {
+                    display: none;
+                    &-adaptive {
+                        display: block;
                         width: auto;
                     }
                 }
-                .breaking-page {
-                    &__columns-right {
-                        padding-left: 40px;
-                    }
+                &__box-inner {
+                    border-left: none;
+                    display: flex;
+                    justify-content: space-between;
                 }
-                .brands-page {
-                    &__price,
-                    &__worktime {
-                        font-size: 18px;
-                        line-height: 22px;
-                    }
-                    &__phone,
-                    &__adress {
-                        font-size: 16px;
-                        line-height: 22px;
-                    }
-                    &__box-inner {
-                        padding-left: 0;
-                    }
+                &__columns {
+                    margin-bottom: 20px;
                 }
-            }
-            
-            @media (max-width: 1080px) {
-                .breaking-item {
-                    &__text {
-                        max-width: 210px;
-                    }
+                &__columns-inner {
+                    margin-top: 20px;
+                    padding-right: 20px;
                 }
-                .reviews-bottom {
+                &__columns-inner {
                     display: block;
-                    &__inner {
-                        margin-top: 30px;
-                        margin-left: -20px;
-                    }
                 }
-                .footer {
-                    &__title:before {
-                        display: none;
-                        font-size: 18px;
-                    }
-                }
-                .breaking-page {
-                    &__box-inner {
-                        padding-left: 20px;
-                    }
-                    &__box {
-                        height: 320px;
-                    }
-                    &__title {
-                        font-size: 24px;
-                    }
-                    &__link {
-                        padding: 10px 28px;
-                    }
-                    &__call {
-                        padding: 8px 24px;
-                    }
-                    &__price,
-                    &__worktime {
-                        font-size: 18px;
-                    }
-                    &__phone,
-                    &__adress {
-                        font-size: 18px;
-                        padding-bottom: 28px;
-                    }
-                }
-                .brands-page {
-                    &__price,
-                    &__worktime {
-                        font-size: 18px;
-                        line-height: 22px;
-                    }
-                    &__phone,
-                    &__adress {
-                        font-size: 16px;
-                        line-height: 22px;
-                    }
-                    &__box-inner {
-                        padding-left: 0;
-                    }
-                    &__link {
-                        padding: 10px 30px;
-                        font-size: 12px;
-                    }
-                    &__call {
-                        padding: 8px 30px;
-                        font-size: 14px;
-                    }
+                &__columns-right {
+                    padding-left: 0;
                 }
             }
-            
-            @media (min-width: 992px) and (max-width: 1199px) {
-                .header {
-                    &__image-bg-small {
-                        display: none;
-                    }
-                    &__text {
-                        margin-top: 100px;
-                        padding: 0 50px;
-                    }
-                    &__btn {
-                        padding: 12px 36px;
-                        background-color: #748a00;
-                        font-size: 15px;
-                        line-height: 18px;
-                        color: #fff;
-                        box-shadow: 0px 0px 30px rgb(116 138 0 / 20%);
-                    }
-                }
-                .menu {
-                    &__item+.menu__item {
-                        padding-left: 40px;
-                    }
-                    &__btn {
-                        display: none;
-                    }
-                }
-            }
-            
-            @media (max-width: 992px) {
-                .header {
-                    &__top {
+            .brands-page {
+                &__image {
+                    display: none;
+                    &-adaptive {
                         display: block;
                     }
-                    &__top-wrapper {
-                        display: flex;
-                        justify-content: space-between;
-                    }
-                    &__image-bg-small {
-                        display: none;
-                    }
-                    &__title {
-                        margin-bottom: 40px;
-                        font-size: 36px;
-                        line-height: 42px;
-                    }
                 }
-                .header__top.header__top--active .menu__list {
-                    transform: translateY(-0%);
+                &__box-inner {
+                    display: flex;
+                    justify-content: space-between;
                 }
-                .header__top.header__top--active path {
-                    fill: white;
+                &__columns {
+                    margin-bottom: 20px;
                 }
-                .header__top.header__top--active .menu__btn rect {
-                    fill: white;
-                }
-                .header__top.header__top--active ul.menu__list {
-                    background-color: $accent;
-                    padding: 80px 0 15px;
-                }
-                .header__burger-menu.header__burger-menu--active path {
-                    fill: white;
-                }
-                .logo,
-                .menu__btn {
-                    position: relative;
-                    z-index: 900;
-                }
-                .logo svg {
-                    width: 225px;
-                    height: 50px;
-                }
-                .breaking {
-                    &__inner {
-                        grid-gap: 20px;
-                    }
-                }
-                .menu {
-                    &__list {
-                        transform: translateY(-200%);
-                        transition: all .5s;
-                        display: block;
-                        padding-left: 0;
-                        position: absolute;
-                        right: 0;
-                        left: 0;
-                        text-align: center;
-                        top: 0;
-                        z-index: 20;
-                    }
-                    &__item {
-                        padding: 15px 0;
-                        background-color: $accent;
-                        border-bottom: 2px solid $border;
-                    }
-                    &__link {
-                        color: #fff;
-                        font-size: 18px;
-                    }
-                    &__item+.menu__item {
-                        padding-left: 0px;
-                    }
-                    &__btn {
-                        display: block;
-                        background-color: transparent;
-                        border: none;
-                        padding: 0;
-                        margin-top: 25px;
-                        margin-right: 35px;
-                    }
-                    &__phone {
-                        margin-left: 20px;
-                    }
-                }
-                .breaking-item {
-                    &__inner {
-                        display: block;
-                    }
-                    &__columns {
-                        margin-left: 30px;
-                    }
-                }
-                .brands {
-                    padding-bottom: 100px;
-                    &__inner {
-                        display: grid;
-                        grid-template-columns: repeat(3, 1fr);
-                        grid-gap: 30px;
-                        margin-bottom: 50px;
-                    }
-                }
-                .reviews {
-                    padding-bottom: 25px;
-                }
-                .contacts-top {
-                    height: auto;
-                    &__item+.contacts-top__item {
-                        padding-left: 0;
-                        border-left: 0;
-                    }
-                    &__text {
-                        font-weight: 700;
-                        font-size: 14px;
-                    }
-                }
-                .breaking-page {
-                    &__box {
-                        display: block;
-                        height: auto;
-                    }
-                    &__image {
-                        display: none;
-                        &-adaptive {
-                            display: block;
-                            width: auto;
-                        }
-                    }
-                    &__box-inner {
-                        border-left: none;
-                        display: flex;
-                        justify-content: space-between;
-                    }
-                    &__columns {
-                        margin-bottom: 20px;
-                    }
-                    &__columns-inner {
-                        margin-top: 20px;
-                        padding-right: 20px;
-                    }
-                    &__columns-inner {
-                        display: block;
-                    }
-                    &__columns-right {
-                        padding-left: 0;
-                    }
-                }
-                .brands-page {
-                    &__image {
-                        display: none;
-                        &-adaptive {
-                            display: block;
-                        }
-                    }
-                    &__box-inner {
-                        display: flex;
-                        justify-content: space-between;
-                    }
-                    &__columns {
-                        margin-bottom: 20px;
-                    }
-                    &__columns-inner {
-                        display: block;
-                        margin-top: 20px;
-                        padding-left: 40px;
-                    }
-                    &__columns-right {
-                        padding-left: 0;
-                    }
-                    &__title {
-                        font-size: 16px;
-                    }
-                    &__subtitle {
-                        font-size: 16px;
-                    }
-                    &__wrap {
-                        display: flex;
-                        &-worktime {
-                            padding-left: 30px;
-                        }
-                        &-right {
-                            display: block;
-                        }
-                    }
-                    &__heading-inner {
-                        padding-left: 20px;
-                    }
-                    &__columns-inner {
-                        margin-top: 0;
-                    }
-                }
-            }
-            
-            @media (max-width: 883px) {
-                .brands-page {
-                    &__box-inner {
-                        display: block;
-                        padding-right: 20px;
-                    }
-                    &__title {
-                        font-size: 26px;
-                        text-align: center;
-                    }
-                    &__subtitle {
-                        font-size: 18px;
-                        text-align: center;
-                    }
-                    &__image-adaptive {
-                        margin: 0 auto;
-                    }
-                    &__box {
-                        display: block;
-                    }
-                    &__wrap {
-                        padding: 0 30px;
-                        display: flex;
-                        justify-content: space-between;
-                    }
-                    &__image-adaptive {
-                        margin-bottom: 30px;
-                    }
-                }
-            }
-            
-            @media (max-width: 854px) {
-                .header {
-                    margin-bottom: 50px;
-                    &__inner {
-                        display: block;
-                        padding: 0;
-                    }
-                    &__text {
-                        text-align: center;
-                        padding: 0;
-                    }
-                    &__image-bg {
-                        display: none;
-                    }
-                    &__image-bg-small {
-                        padding-top: 30px;
-                        display: block;
-                        margin: 0 auto;
-                        width: 80%;
-                    }
-                }
-                .breaking-page {
-                    &__heading-inner {
-                        padding-right: 20px;
-                    }
-                }
-            }
-            
-            @media (max-width: 767px) {
-                .brands {
-                    padding-bottom: 100px;
-                    &__inner {
-                        display: grid;
-                        grid-template-columns: repeat(2, 1fr);
-                    }
-                }
-                .reviews-bottom {
+                &__columns-inner {
                     display: block;
-                    &__inner {
+                    margin-top: 20px;
+                    padding-left: 40px;
+                }
+                &__columns-right {
+                    padding-left: 0;
+                }
+                &__title {
+                    font-size: 18px;
+                }
+                &__subtitle {
+                    font-size: 16px;
+                }
+                &__wrap {
+                    display: flex;
+                    &-worktime {
+                        padding-left: 30px;
+                    }
+                    &-right {
                         display: block;
                     }
-                    &__btn {
-                        display: flex;
-                        justify-content: center;
-                        margin-bottom: 20px;
-                    }
                 }
-                .reviews-slider {
-                    &__item {
-                        width: 380px;
-                        height: 450px;
-                    }
-                    &__item-text {
-                        height: 300px;
-                    }
+                &__heading-inner {
+                    padding-left: 20px;
                 }
-                .footer {
+                &__columns-inner {
+                    margin-top: 50px;
+                }
+            }
+        }
+        
+        @media (max-width: 883px) {
+            .brands-page {
+                &__box-inner {
                     display: block;
-                    &__brands {
-                        display: none;
-                    }
+                    padding-right: 20px;
                 }
-                .breaking-page {
-                    &__text {
-                        font-size: 14px;
-                        margin-bottom: 14px;
-                    }
-                    &__adress {
-                        font-size: 14px;
-                    }
-                    &__call {
-                        font-size: 14px;
-                        padding: 8px 12px;
-                    }
-                    &__link {
-                        font-size: 14px;
-                        padding: 8px 12px;
-                    }
-                    /* &__image-adaptive {
+                &__title {
+                    font-size: 26px;
+                    text-align: center;
+                }
+                &__subtitle {
+                    font-size: 18px;
+                    text-align: center;
+                }
+                &__image-adaptive {
+                    margin: 0 auto;
+                }
+                &__box {
+                    display: block;
+                    padding: 0px;
+                }
+                &__wrap {
+                    padding: 0 30px;
+                    display: flex;
+                    justify-content: center;
+                }
+                &__image-adaptive {
+                    margin-bottom: 30px;
+                }
+                &__wrap-adress {
+                    padding-left: 30px;
+                }
+                &__text,
+                &__price,
+                &__worktime {
+                    text-align: center;
+                }
+                &__link,
+                &__call {
+                    width: 200px;
+                    margin: 0 auto;
+                }
+            }
+            .order-form {
+                &__img {
+                    padding-left: 0px;
+                }
+                &__columns-phone {
+                    text-align: left;
+                }
+            }
+        }
+        
+        @media (max-width: 854px) {
+            .header {
+                &__inner {
+                    display: block;
+                    padding: 0;
+                }
+                &__text {
+                    text-align: center;
+                    padding: 0;
+                }
+                &__image-bg {
+                    display: none;
+                }
+                &__image-bg-small {
+                    padding-top: 30px;
+                    display: block;
+                    margin: 0 auto;
+                    width: 80%;
+                }
+            }
+            .breaking-page {
+                &__heading-inner {
+                    padding-right: 20px;
+                }
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .brands {
+                padding-bottom: 100px;
+                &__inner {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+            .reviews-bottom {
+                display: block;
+                &__inner {
+                    display: block;
+                }
+                &__btn {
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 20px;
+                }
+            }
+            .reviews-slider {
+                &__item {
+                    width: 380px;
+                    height: 450px;
+                }
+                &__item-text {
+                    height: 300px;
+                }
+            }
+            .footer {
+                display: block;
+                &__brands {
+                    display: none;
+                }
+            }
+            .breaking-page {
+                &__text {
+                    font-size: 14px;
+                    margin-bottom: 14px;
+                }
+                &__adress {
+                    font-size: 14px;
+                }
+                &__call {
+                    font-size: 14px;
+                    padding: 8px 12px;
+                }
+                &__link {
+                    font-size: 14px;
+                    padding: 8px 12px;
+                }
+                /* &__image-adaptive {
                             width: 320px;
                         } */
-                    &__price,
-                    &__worktime {
-                        margin-bottom: 30px;
-                    }
-                }
-                .brands-page {
-                    &__box-inner {
-                        padding-right: 20px;
-                    }
-                    &__inner {
-                        padding-bottom: 0;
-                    }
+                &__price,
+                &__worktime {
+                    margin-bottom: 30px;
                 }
             }
-            
-            @media (max-width: 650px) {
-                .breaking {
-                    &__inner {
-                        display: block;
-                    }
+            .brands-page {
+                &__box-inner {
+                    padding-right: 20px;
                 }
-                .breaking-item {
-                    min-width: 250px;
-                    margin-bottom: 20px;
-                    &__columns {
-                        margin-left: 0px;
-                    }
-                    &__title {
-                        padding: 28px 0 22px 65px;
-                        position: relative;
-                        &::after {
-                            content: "";
-                            position: absolute;
-                            background-image: url('images/icons/arrow-down.svg');
-                            width: 11px;
-                            height: 7px;
-                            top: 36px;
-                            right: 30px;
-                        }
-                    }
-                    &__inner {
-                        display: none;
-                    }
+                &__inner {
+                    padding-bottom: 0;
                 }
-                .item__title {
-                    font-size: 14px;
-                    line-height: 24px;
-                }
-                .contacts-top {
+            }
+        }
+        
+        @media (max-width: 650px) {
+            .breaking {
+                &__inner {
                     display: block;
-                    height: auto;
-                    &__item {
-                        padding: 10px;
-                    }
-                    &__text {
-                        font-weight: 700;
-                        font-size: 18px;
-                    }
-                }
-                .breaking-page {
-                    &__box-inner {
-                        display: block;
-                    }
-                    &__image-adaptive {
-                        width: 420px;
-                        margin: 0 auto;
-                    }
-                    &__columns-inner {
-                        display: flex;
-                        justify-content: space-between;
-                    }
-                    &__price,
-                    &__worktime {
-                        padding-bottom: 26px;
-                    }
-                    &__phone,
-                    &__adress {
-                        margin-bottom: 30px;
-                    }
                 }
             }
-            
+            .breaking-item {
+                min-width: 250px;
+                margin-bottom: 20px;
+                &__columns {
+                    margin-left: 0px;
+                }
+                &__title {
+                    padding: 28px 0 22px 65px;
+                    position: relative;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        background-image: url('images/icons/arrow-down.svg');
+                        width: 11px;
+                        height: 7px;
+                        top: 36px;
+                        right: 30px;
+                    }
+                }
+                &__inner {
+                    display: none;
+                }
+            }
+            .item__title {
+                font-size: 14px;
+                line-height: 24px;
+            }
+            .contacts-top {
+                display: block;
+                height: auto;
+                &__item {
+                    padding: 10px;
+                }
+                &__text {
+                    font-weight: 700;
+                    font-size: 18px;
+                }
+            }
+            .breaking-page {
+                &__box-inner {
+                    display: block;
+                }
+                &__image-adaptive {
+                    width: 420px;
+                    margin: 0 auto;
+                }
+                &__columns-inner {
+                    display: flex;
+                    justify-content: space-between;
+                }
+                &__price,
+                &__worktime {
+                    padding-bottom: 26px;
+                }
+                &__phone,
+                &__adress {
+                    margin-bottom: 30px;
+                }
+            }
             .brands-page {
                 &__wrap-right {
                     display: block;
@@ -555,167 +603,243 @@
                 &__wrap-worktime {
                     padding-left: 0px;
                 }
+                &__wrap-adress {
+                    padding-left: 0px;
+                }
             }
-            
-            @media (max-width: 480px) {
-                .menu {
-                    &__btn {
-                        margin-right: 10px;
-                    }
+        }
+        /*АДАПТИВ ТАБЛИЦЫ ЦЕН*/
+        
+        @media screen and (max-width: 600px) {
+            .table-price {
+                &__phone-call {
+                    display: inline-block;
+                    text-align: center;
                 }
-                .header {
-                    &__title {
-                        font-size: 24px;
-                    }
-                    &__text {
-                        margin-top: 20px;
-                    }
+                &__repair {
+                    display: none;
                 }
-                .title {
-                    padding: 40px 0 30px;
+                table {
+                    border: 0;
+                }
+                table thead {
+                    display: none;
+                }
+                table tr {
+                    margin-bottom: 10px;
+                    display: block;
+                    border-bottom: 2px solid $secondary;
+                }
+                table td {
+                    display: block;
+                    text-align: right;
+                    font-size: 13px;
+                    border-bottom: 1px solid $secondary;
+                }
+                table td:last-child {
+                    border-bottom: 0;
+                }
+                table td:before {
+                    content: attr(data-label);
+                    float: left;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                }
+                table th,
+                table td {
+                    border-right: 2px solid #fff;
+                }
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .menu {
+                &__btn {
+                    margin-right: 10px;
+                }
+            }
+            .header {
+                &__title {
+                    font-size: 24px;
+                }
+                &__text {
+                    margin-top: 20px;
+                }
+            }
+            .title {
+                padding: 40px 0 30px;
+                font-size: 18px;
+            }
+            .breaking-item {
+                background-color: #fff;
+            }
+            .slider-choice {
+                &__item {
+                    width: 290px;
+                }
+                &__item-inner {
+                    padding: 0 20px;
+                }
+            }
+            .brands {
+                padding-bottom: 25px;
+                &__inner {
+                    display: grid;
+                    grid-template-columns: repeat(1, 1fr);
+                }
+            }
+            .reviews-bottom {
+                &__link {
+                    display: none;
+                }
+            }
+            .reviews {
+                display: none;
+            }
+            .contacts-top {
+                display: none;
+            }
+            .footer {
+                display: block;
+                &__menu {
+                    display: none;
+                }
+            }
+            .hidden {
+                &__title {
+                    display: block;
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                    padding-left: 10px;
+                }
+                &__headline {
+                    display: block;
+                    padding-left: 10px;
+                }
+            }
+            .contacts {
+                &__map-btn {
+                    display: block;
+                }
+            }
+            .brands-page {
+                &__title {
                     font-size: 18px;
                 }
-                .breaking-item {
-                    background-color: #fff;
+                &__subtitle {
+                    font-size: 16px;
                 }
-                .slider-choice {
-                    &__item {
-                        width: 290px;
-                    }
-                    &__item-inner {
-                        padding: 0 20px;
-                    }
+                &__price,
+                &__worktime {
+                    font-size: 20px;
                 }
-                .brands {
-                    padding-bottom: 25px;
-                    &__inner {
-                        display: grid;
-                        grid-template-columns: repeat(1, 1fr);
-                    }
+                &__phone,
+                &__adress {
+                    font-size: 16px;
+                    margin-bottom: 0;
                 }
-                .reviews-bottom {
-                    &__link {
-                        display: none;
-                    }
+                &__wrap-phone,
+                &__wrap-adress {
+                    text-align: left;
                 }
-                .reviews {
-                    display: none;
+                &__columns-inner {
+                    padding-left: 20px;
                 }
-                .contacts-top {
-                    display: none;
+                &__box-inner {
+                    padding-right: 20px;
                 }
-                .footer {
+                &__call {
                     display: block;
-                    &__menu {
-                        display: none;
-                    }
+                    background-color: #ADC431;
+                    color: #fff;
+                    padding: 20px 24px;
+                    border: 1px solid $accent;
+                    box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
+                    font-size: 16px;
+                    text-align: center;
                 }
-                .hidden {
-                    &__title {
-                        display: block;
-                        font-size: 16px;
-                        margin-bottom: 10px;
-                        padding-left: 10px;
-                    }
-                    &__headline {
-                        display: block;
-                        padding-left: 10px;
-                    }
+                &__link {
+                    display: block;
+                    background-color: #fff;
+                    color: #000;
+                    border: 2px solid $secondary;
                 }
-                .brands-page {
-                    &__title {
-                        font-size: 18px;
-                    }
-                    &__subtitle {
-                        font-size: 16px;
-                    }
-                    &__price,
-                    &__worktime {
-                        font-size: 20px;
-                    }
-                    &__phone,
-                    &__adress {
-                        font-size: 18px;
-                        margin-bottom: 0;
-                    }
-                    &__wrap-phone,
-                    &__wrap-adress {
-                        text-align: left;
-                    }
-                    &__columns-inner {
-                        padding-left: 20px;
-                    }
-                    &__box-inner {
-                        padding-right: 20px;
-                    }
-                    &__text {
-                        font-size: 16px;
-                    }
-                    &__call {
-                        display: block;
-                        background-color: #ADC431;
-                        color: #fff;
-                        padding: 20px 24px;
-                        border: 1px solid $accent;
-                        box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
-                        font-size: 16px;
-                        text-align: center;
-                    }
-                    &__link {
-                        display: block;
-                        background-color: #fff;
-                        color: #000;
-                        border: 2px solid $border;
-                    }
-                    &__wrap {
-                        padding: 0;
-                    }
+                &__wrap {
+                    padding: 0;
+                    justify-content: space-between;
                 }
-                .breaking-page {
-                    &__columns-inner {
-                        display: block;
-                        text-align: center;
-                    }
-                    &__text {
-                        font-size: 16px;
-                    }
-                    &__price,
-                    &__worktime {
-                        font-size: 20px;
-                    }
-                    &__phone,
-                    &__adress {
-                        font-size: 18px;
-                        margin-bottom: 0;
-                    }
-                    &__title {
-                        font-size: 18px;
-                    }
-                    &__subtitle {
-                        font-size: 14px;
-                    }
-                    &__wrap {
-                        display: flex;
-                        justify-content: space-between;
-                    }
-                    &__link {
-                        display: block;
-                        background-color: #fff;
-                        color: #000;
-                        border: 2px solid $border;
-                    }
-                    &__call {
-                        display: block;
-                        background-color: #ADC431;
-                        color: #fff;
-                        padding: 20px 24px;
-                        border: 1px solid $accent;
-                        box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
-                        font-size: 16px;
-                        text-align: center;
-                    }
-                    &__columns-right {
-                        text-align: left;
-                    }
+                &__text,
+                &__price,
+                &__worktime {
+                    text-align: left;
+                }
+                &__link,
+                &__call {
+                    width: auto;
                 }
             }
+            .breaking-page {
+                &__columns-inner {
+                    display: block;
+                    text-align: center;
+                }
+                &__text {
+                    font-size: 16px;
+                }
+                &__price,
+                &__worktime {
+                    font-size: 20px;
+                }
+                &__phone,
+                &__adress {
+                    font-size: 16px;
+                    margin-bottom: 0;
+                }
+                &__title {
+                    font-size: 18px;
+                }
+                &__subtitle {
+                    font-size: 14px;
+                }
+                &__wrap {
+                    display: flex;
+                    justify-content: space-between;
+                }
+                &__link {
+                    display: block;
+                    background-color: #fff;
+                    color: #000;
+                    border: 2px solid $secondary;
+                }
+                &__call {
+                    display: block;
+                    background-color: #ADC431;
+                    color: #fff;
+                    padding: 20px 24px;
+                    border: 1px solid $accent;
+                    box-shadow: 0px 0px 30px rgba(116, 138, 0, 0.2);
+                    font-size: 16px;
+                    text-align: center;
+                }
+                &__columns-right {
+                    text-align: left;
+                }
+            }
+            .order-form {
+                &__inner {
+                    padding: 20px;
+                }
+                &__form {
+                    width: auto;
+                    margin-top: 20px;
+                }
+                & input {
+                    font-size: 14px;
+                    width: 100%;
+                }
+                & button {
+                    width: 100%;
+                    font-size: 14px;
+                }
+            }
+        }
